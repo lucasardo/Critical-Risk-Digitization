@@ -1,0 +1,3032 @@
+@prefix : <http://WSP.org/ontology/cro#> .
+@prefix cro: <http://WSP.org/ontology/cro#> .
+@prefix ns1: <http://www.w3.org/2002/07/owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://WSP.org/ontology/cro#> .
+
+<http://WSP.org/ontology/cro> rdf:type owl:Ontology ;
+                               owl:versionIRI <http://WSP.org/ontology/cro-1.16> .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://WSP.org/ontology/cro#UpgradeThroughProject
+cro:UpgradeThroughProject rdf:type owl:ObjectProperty ;
+                          rdfs:comment "Specifies a specific class was upgraded or is planned to be upgraded by the effors of a project" .
+
+
+###  http://WSP.org/ontology/cro#connectsFrom
+cro:connectsFrom rdf:type owl:ObjectProperty ;
+                 rdfs:comment "Indicates the source from which a transmission line starts, typically a power station." .
+
+
+###  http://WSP.org/ontology/cro#connectsTailingsCells
+cro:connectsTailingsCells rdf:type owl:ObjectProperty .
+
+
+###  http://WSP.org/ontology/cro#connectsTo
+cro:connectsTo rdf:type owl:ObjectProperty ;
+               rdfs:comment "Indicates the destination to which a transmission line connects, typically a transformer." .
+
+
+###  http://WSP.org/ontology/cro#containedIn
+cro:containedIn rdf:type owl:ObjectProperty .
+
+
+###  http://WSP.org/ontology/cro#definesRecommendations
+cro:definesRecommendations rdf:type owl:ObjectProperty .
+
+
+###  http://WSP.org/ontology/cro#distributedTo
+cro:distributedTo rdf:type owl:ObjectProperty ;
+                  rdfs:comment "Indicates the employee or entity to whom a document, report, or data set has been distributed." .
+
+
+###  http://WSP.org/ontology/cro#hasAssumptions
+cro:hasAssumptions rdf:type owl:ObjectProperty ;
+                   rdfs:comment "Links Critical Risk Scenarios to Assumptions and Basis" .
+
+
+###  http://WSP.org/ontology/cro#hasAuditsAndReviews
+cro:hasAuditsAndReviews rdf:type owl:ObjectProperty ;
+                        rdfs:comment "Specifies the audits and reviews help for the Critical Risk Assesment Report" .
+
+
+###  http://WSP.org/ontology/cro#hasCatastrophicRiskScenariosWithLowProbability
+cro:hasCatastrophicRiskScenariosWithLowProbability rdf:type owl:ObjectProperty ;
+                                                   rdfs:comment "Links Critical Risk Scenario Overview to Catastrophic Risk Scenarios with Low Probability Overview" .
+
+
+###  http://WSP.org/ontology/cro#hasCriticalRiskScenario
+cro:hasCriticalRiskScenario rdf:type owl:ObjectProperty ;
+                            rdfs:comment "Links Critical Risk Scenarios Overview with the actual critical risk scenarios and their descriptions." .
+
+
+###  http://WSP.org/ontology/cro#hasCriticalRiskScenarioOverview
+cro:hasCriticalRiskScenarioOverview rdf:type owl:ObjectProperty .
+
+
+###  http://WSP.org/ontology/cro#hasDependencies
+cro:hasDependencies rdf:type owl:ObjectProperty ;
+                    rdfs:comment "Links Critical Risk Scenarios to Dependencies" .
+
+
+###  http://WSP.org/ontology/cro#hasDieselGenerator
+cro:hasDieselGenerator rdf:type owl:ObjectProperty ;
+                       rdfs:comment "Indicates that a power station includes a diesel generator." .
+
+
+###  http://WSP.org/ontology/cro#hasDistributionSystem
+cro:hasDistributionSystem rdf:type owl:ObjectProperty ;
+                          rdfs:comment "Indicates that a power network includes a distribution system." .
+
+
+###  http://WSP.org/ontology/cro#hasDivision
+cro:hasDivision rdf:type owl:ObjectProperty ;
+                rdfs:comment "Connects a company to its divisions, each of which is responsible for a specific aspect of the company's operations." .
+
+
+###  http://WSP.org/ontology/cro#hasEmbankment
+cro:hasEmbankment rdf:type owl:ObjectProperty .
+
+
+###  http://WSP.org/ontology/cro#hasEmployee
+cro:hasEmployee rdf:type owl:ObjectProperty ;
+                rdfs:comment "Links a company to the employees who work within it, as well as an employee to anmy work they have done" .
+
+
+###  http://WSP.org/ontology/cro#hasEquipment
+cro:hasEquipment rdf:type owl:ObjectProperty ;
+                 rdfs:comment "Links a facility, operation, or process to the equipment used within it, wether its machinery, vessel, etc." .
+
+
+###  http://WSP.org/ontology/cro#hasFacility
+cro:hasFacility rdf:type owl:ObjectProperty ;
+                rdfs:comment "Associates an operation with the facilities it encompasses, where various activities and processes are carried out." .
+
+
+###  http://WSP.org/ontology/cro#hasIdentifiedCriticalRiskScenarios
+cro:hasIdentifiedCriticalRiskScenarios rdf:type owl:ObjectProperty .
+
+
+###  http://WSP.org/ontology/cro#hasIdentifiedRecommendations
+cro:hasIdentifiedRecommendations rdf:type owl:ObjectProperty .
+
+
+###  http://WSP.org/ontology/cro#hasInloading
+cro:hasInloading rdf:type owl:ObjectProperty ;
+                 rdfs:comment "Connects a terminal to the inloading operations that involve receiving goods or materials." .
+
+
+###  http://WSP.org/ontology/cro#hasMarineOperation
+cro:hasMarineOperation rdf:type owl:ObjectProperty ;
+                       rdfs:comment "Denotes the marine-related operations, such as berthing, inloading, and outloading, associated with a port." .
+
+
+###  http://WSP.org/ontology/cro#hasNATHANData
+cro:hasNATHANData rdf:type owl:ObjectProperty ;
+                  rdfs:comment "Connects a Critical Risk Assessment (CRA) to the relevant NATHAN Data, which includes risk factors such as natural disasters." .
+
+
+###  http://WSP.org/ontology/cro#hasOutloading
+cro:hasOutloading rdf:type owl:ObjectProperty ;
+                  rdfs:comment "Links a terminal to the outloading operations that involve dispatching goods or materials." .
+
+
+###  http://WSP.org/ontology/cro#hasPowerStation
+cro:hasPowerStation rdf:type owl:ObjectProperty ;
+                    rdfs:comment "Indicates that a power network includes a power station." .
+
+
+###  http://WSP.org/ontology/cro#hasProcess
+cro:hasProcess rdf:type owl:ObjectProperty ;
+               rdfs:comment "Associates a facility or operation with specific processes or workflows that take place within it." .
+
+
+###  http://WSP.org/ontology/cro#hasProcessControl
+cro:hasProcessControl rdf:type owl:ObjectProperty .
+
+
+###  http://WSP.org/ontology/cro#hasProject
+cro:hasProject rdf:type owl:ObjectProperty ;
+               rdfs:comment "Specifies a class has a project related to it" .
+
+
+###  http://WSP.org/ontology/cro#hasRecommendation
+cro:hasRecommendation rdf:type owl:ObjectProperty ;
+                      rdfs:comment "Associates a critical risk scenario with its recommended actions." ,
+                                   "Links Recommendations to Critical Risk Scenarios" .
+
+
+###  http://WSP.org/ontology/cro#hasReferenceDocuments
+cro:hasReferenceDocuments rdf:type owl:ObjectProperty ;
+                          rdfs:comment "Links Survey and Report Details to Reference Documents" .
+
+
+###  http://WSP.org/ontology/cro#hasRejectedRecommendations
+cro:hasRejectedRecommendations rdf:type owl:ObjectProperty ;
+                               rdfs:comment "Links Recommendation Overview to Rejected Recommendations Since Last Visit" .
+
+
+###  http://WSP.org/ontology/cro#hasRevision
+cro:hasRevision rdf:type owl:ObjectProperty ;
+                rdfs:comment "Indicates the revision history or specific revision details associated with a document or assessment." .
+
+
+###  http://WSP.org/ontology/cro#hasRisk
+cro:hasRisk rdf:type owl:ObjectProperty ;
+            rdfs:domain cro:Equipment ;
+            rdfs:comment "Associates an operation or asset with a critical risk scenario." .
+
+
+###  http://WSP.org/ontology/cro#hasRiskAssessmentReport
+cro:hasRiskAssessmentReport rdf:type owl:ObjectProperty ;
+                            rdfs:comment "Associates an operation or facility with its Critical Risk Assessments (CRAs), which evaluate potential risks." .
+
+
+###  http://WSP.org/ontology/cro#hasRiskManagementSubElement
+cro:hasRiskManagementSubElement rdf:type owl:ObjectProperty .
+
+
+###  http://WSP.org/ontology/cro#hasRiskManagementSystem
+cro:hasRiskManagementSystem rdf:type owl:ObjectProperty .
+
+
+###  http://WSP.org/ontology/cro#hasSignificantChanges
+cro:hasSignificantChanges rdf:type owl:ObjectProperty ;
+                          rdfs:comment "Specifies that the Critical Risk Assesment Report has a significant change from the previous report." .
+
+
+###  http://WSP.org/ontology/cro#hasSignificantIncidents
+cro:hasSignificantIncidents rdf:type owl:ObjectProperty ;
+                            rdfs:comment "Specifies that the Critical Risk Assesment Report had a significant incident since the last report." .
+
+
+###  http://WSP.org/ontology/cro#hasSpillway
+cro:hasSpillway rdf:type owl:ObjectProperty .
+
+
+###  http://WSP.org/ontology/cro#hasSubFacility
+cro:hasSubFacility rdf:type owl:ObjectProperty ;
+                   rdfs:comment "Links a main facility to its associated sub-facilities, which may focus on specific operational activities." .
+
+
+###  http://WSP.org/ontology/cro#hasSubstation
+cro:hasSubstation rdf:type owl:ObjectProperty ;
+                  rdfs:comment "Indicates that a distribution system includes a substation." .
+
+
+###  http://WSP.org/ontology/cro#hasSurveyAndReportDetails
+cro:hasSurveyAndReportDetails rdf:type owl:ObjectProperty .
+
+
+###  http://WSP.org/ontology/cro#hasTSF
+cro:hasTSF rdf:type owl:ObjectProperty .
+
+
+###  http://WSP.org/ontology/cro#hasTailingsCell
+cro:hasTailingsCell rdf:type owl:ObjectProperty .
+
+
+###  http://WSP.org/ontology/cro#hasTerminal
+cro:hasTerminal rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf cro:hasFacility ;
+                rdfs:comment "Connects a port to its associated terminal(s), where loading and unloading activities occur." .
+
+
+###  http://WSP.org/ontology/cro#hasTransformer
+cro:hasTransformer rdf:type owl:ObjectProperty ;
+                   rdfs:comment "Indicates that a transformer is located at a specific substation" .
+
+
+###  http://WSP.org/ontology/cro#hasTransmissionLine
+cro:hasTransmissionLine rdf:type owl:ObjectProperty ;
+                        rdfs:comment "Indicates that a distribution system includes a transmission line." .
+
+
+###  http://WSP.org/ontology/cro#hasTurbine
+cro:hasTurbine rdf:type owl:ObjectProperty ;
+               rdfs:comment "Indicates that a power station includes a turbine." .
+
+
+###  http://WSP.org/ontology/cro#impactsAssetGroup
+cro:impactsAssetGroup rdf:type owl:ObjectProperty ;
+                      rdfs:comment "Links a Critical Risk Scenario to an Asset Group such as Port Facilities, Power Distribution and Material Handling." .
+
+
+###  http://WSP.org/ontology/cro#impactsOperation
+cro:impactsOperation rdf:type owl:ObjectProperty .
+
+
+###  http://WSP.org/ontology/cro#improvedCriticalRiskScenario
+cro:improvedCriticalRiskScenario rdf:type owl:ObjectProperty .
+
+
+###  http://WSP.org/ontology/cro#improvesOperation
+cro:improvesOperation rdf:type owl:ObjectProperty .
+
+
+###  http://WSP.org/ontology/cro#isPartOf
+cro:isPartOf rdf:type owl:ObjectProperty .
+
+
+###  http://WSP.org/ontology/cro#issuedBy
+cro:issuedBy rdf:type owl:ObjectProperty ;
+             rdfs:comment "Specifies the employee or entity that issued a document, report, or directive." .
+
+
+###  http://WSP.org/ontology/cro#operatedBy
+cro:operatedBy rdf:type owl:ObjectProperty ;
+               rdfs:comment "Denotes the division or entity responsible for the day-to-day operations of a facility, process, or piece of equipment." .
+
+
+###  http://WSP.org/ontology/cro#ownedBy
+cro:ownedBy rdf:type owl:ObjectProperty ;
+            rdfs:comment "Identifies the company or entity that owns a facility, equipment, or operation." .
+
+
+###  http://WSP.org/ontology/cro#preparedBy
+cro:preparedBy rdf:type owl:ObjectProperty ;
+               rdfs:comment "Specifies the employee responsible for preparing a specific document, report, or assessment." .
+
+
+###  http://WSP.org/ontology/cro#producesTailings
+cro:producesTailings rdf:type owl:ObjectProperty .
+
+
+###  http://WSP.org/ontology/cro#providesOreForProcessing
+cro:providesOreForProcessing rdf:type owl:ObjectProperty .
+
+
+###  http://WSP.org/ontology/cro#recommendationImprovesEquipment
+cro:recommendationImprovesEquipment rdf:type owl:ObjectProperty .
+
+
+###  http://WSP.org/ontology/cro#recommendationImprovesFacility
+cro:recommendationImprovesFacility rdf:type owl:ObjectProperty .
+
+
+###  http://WSP.org/ontology/cro#responsibleFor
+cro:responsibleFor rdf:type owl:ObjectProperty .
+
+
+###  http://WSP.org/ontology/cro#riskImpactsEquipment
+cro:riskImpactsEquipment rdf:type owl:ObjectProperty .
+
+
+###  http://WSP.org/ontology/cro#riskImpactsFacility
+cro:riskImpactsFacility rdf:type owl:ObjectProperty .
+
+
+###  http://WSP.org/ontology/cro#riskManagementSystemImproved
+cro:riskManagementSystemImproved rdf:type owl:ObjectProperty .
+
+
+###  http://WSP.org/ontology/cro#suppliesPowerTo
+cro:suppliesPowerTo rdf:type owl:ObjectProperty ;
+                    rdfs:comment "Indicates the entity or facility that receives electrical power from a power network or station" .
+
+
+###  http://WSP.org/ontology/cro#transformerLocatedAtSubstation
+cro:transformerLocatedAtSubstation rdf:type owl:ObjectProperty ;
+                                   rdfs:comment "Specifies the class is located at a specific place or location" .
+
+
+###  http://WSP.org/ontology/cro/hasMFLRiskAssessmentReports
+<http://WSP.org/ontology/cro/hasMFLRiskAssessmentReports> rdf:type owl:ObjectProperty .
+
+
+###  http://WSP.org/ontology/cro/hasNLERiskAssessmentReports
+<http://WSP.org/ontology/cro/hasNLERiskAssessmentReports> rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://WSP.org/ontology/cro#BISummary
+cro:BISummary rdf:type owl:DatatypeProperty .
+
+
+###  http://WSP.org/ontology/cro#InstalledInYear
+cro:InstalledInYear rdf:type owl:DatatypeProperty ;
+                    rdfs:comment "The year when the Process Control Automation System was installed and began operation, marking the start of its service life." .
+
+
+###  http://WSP.org/ontology/cro#PCASDescription
+cro:PCASDescription rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf owl:topDataProperty ;
+                    rdfs:comment "A detailed description of the Process Control Automation System, including its capabilities, components, and the specific processes it controls." .
+
+
+###  http://WSP.org/ontology/cro#PCASName
+cro:PCASName rdf:type owl:DatatypeProperty ;
+             rdfs:comment "The official name or designation of the Process Control Automation System, used for identification and documentation purposes." .
+
+
+###  http://WSP.org/ontology/cro#PCASlocatedIn
+cro:PCASlocatedIn rdf:type owl:DatatypeProperty ;
+                  rdfs:comment "The physical location where the Process Control Automation System is installed, such as a control room, facility, or specific site within an operation." .
+
+
+###  http://WSP.org/ontology/cro#ShipsMaterialTo
+cro:ShipsMaterialTo rdf:type owl:DatatypeProperty ;
+                    rdfs:comment "Specifies the destination to which materials are shipped or transported from a facility or terminal." .
+
+
+###  http://WSP.org/ontology/cro#TSFCapacity
+cro:TSFCapacity rdf:type owl:DatatypeProperty .
+
+
+###  http://WSP.org/ontology/cro#TSFConsequenceCategory
+cro:TSFConsequenceCategory rdf:type owl:DatatypeProperty .
+
+
+###  http://WSP.org/ontology/cro#TSFName
+cro:TSFName rdf:type owl:DatatypeProperty .
+
+
+###  http://WSP.org/ontology/cro#TSFStatus
+cro:TSFStatus rdf:type owl:DatatypeProperty .
+
+
+###  http://WSP.org/ontology/cro#Tsunami
+cro:Tsunami rdf:type owl:DatatypeProperty ;
+            rdfs:comment "Indicates the tsunami risk or history for a specific location, relevant to disaster planning and risk assessment." .
+
+
+###  http://WSP.org/ontology/cro#agedConditionBoolean
+cro:agedConditionBoolean rdf:type owl:DatatypeProperty ;
+                         rdfs:comment "Indicates whether the equipment or facility is considered to be in an aged or worn condition, which may impact its reliability or performance." .
+
+
+###  http://WSP.org/ontology/cro#amountOfEquipmentAvailable
+cro:amountOfEquipmentAvailable rdf:type owl:DatatypeProperty ;
+                               rdfs:comment "The quantity of equipment of the specificed individual available within a facility or operation, often important for resource management." .
+
+
+###  http://WSP.org/ontology/cro#amperage
+cro:amperage rdf:type owl:DatatypeProperty ;
+             rdfs:comment "Represents the current in amperes (A) carried by the transmission lines or transformers." .
+
+
+###  http://WSP.org/ontology/cro#appointmentDate
+cro:appointmentDate rdf:type owl:DatatypeProperty .
+
+
+###  http://WSP.org/ontology/cro#assetGroup
+cro:assetGroup rdf:type owl:DatatypeProperty ;
+               rdfs:range xsd:string ;
+               rdfs:comment "Represents the asset group involved in a critical risk scenario." ,
+                            "The group of assets associated with the risk scenario." .
+
+
+###  http://WSP.org/ontology/cro#assumptionDescription
+cro:assumptionDescription rdf:type owl:DatatypeProperty .
+
+
+###  http://WSP.org/ontology/cro#auditAndReviewDescription
+cro:auditAndReviewDescription rdf:type owl:DatatypeProperty ;
+                              rdfs:comment "A detailed description of the audit or review, including its scope, findings, and recommendations." .
+
+
+###  http://WSP.org/ontology/cro#auditReviewName
+cro:auditReviewName rdf:type owl:DatatypeProperty ;
+                    rdfs:comment "The name or title of a specific audit or review conducted as part of the assessment process." .
+
+
+###  http://WSP.org/ontology/cro#benchHeight
+cro:benchHeight rdf:type owl:DatatypeProperty ;
+                rdfs:range xsd:decimal .
+
+
+###  http://WSP.org/ontology/cro#bermWidth
+cro:bermWidth rdf:type owl:DatatypeProperty .
+
+
+###  http://WSP.org/ontology/cro#berthName
+cro:berthName rdf:type owl:DatatypeProperty ;
+              rdfs:comment "The name or designation of a berth within a port, used to identify specific docking locations." .
+
+
+###  http://WSP.org/ontology/cro#berthTerminal
+cro:berthTerminal rdf:type owl:DatatypeProperty ;
+                  rdfs:comment "The terminal associated with a specific berth, used in port and marine operations." .
+
+
+###  http://WSP.org/ontology/cro#businessInterruptionUSDM
+cro:businessInterruptionUSDM rdf:type owl:DatatypeProperty ;
+                             rdfs:comment "Represents the business interruption loss in USD from a critical risk scenario." .
+
+
+###  http://WSP.org/ontology/cro#capacity
+cro:capacity rdf:type owl:DatatypeProperty .
+
+
+###  http://WSP.org/ontology/cro#catastrophicRiskScenariowithLowProbability
+cro:catastrophicRiskScenariowithLowProbability rdf:type owl:DatatypeProperty ;
+                                               rdfs:comment "Individual examples or illustrations of catastrophic risk scenarios with low probability" .
+
+
+###  http://WSP.org/ontology/cro#cellNumber
+cro:cellNumber rdf:type owl:DatatypeProperty .
+
+
+###  http://WSP.org/ontology/cro#cellStatus
+cro:cellStatus rdf:type owl:DatatypeProperty .
+
+
+###  http://WSP.org/ontology/cro#changeDescription
+cro:changeDescription rdf:type owl:DatatypeProperty ;
+                      rdfs:comment "Describe wether  the change in terms of an Organiational Change, a system change, a change to raw materials, production or sales, a change to equipment and facilities, a change to external environment or a change to a specific sritical risk scenario." .
+
+
+###  http://WSP.org/ontology/cro#changeInBusinessInterruption
+cro:changeInBusinessInterruption rdf:type owl:DatatypeProperty ;
+                                 rdfs:comment "Indicates changes in the risk or impact of business interruptions, often related to new mitigation strategies or incidents." .
+
+
+###  http://WSP.org/ontology/cro#changeInEnvironment
+cro:changeInEnvironment rdf:type owl:DatatypeProperty ;
+                        rdfs:comment "Indicates whether there has been a significant change in the environment affecting the operation." .
+
+
+###  http://WSP.org/ontology/cro#changeInEnvironmentDescription
+cro:changeInEnvironmentDescription rdf:type owl:DatatypeProperty ;
+                                   rdfs:comment "Describes changes in the external or internal environment, such as regulatory shifts, climate changes, or operational impacts." .
+
+
+###  http://WSP.org/ontology/cro#changeInPortDescription
+cro:changeInPortDescription rdf:type owl:DatatypeProperty ;
+                            rdfs:comment "Describes modifications or updates that have occurred at the port, including infrastructure changes or operational adjustments." .
+
+
+###  http://WSP.org/ontology/cro#changeInProduction
+cro:changeInProduction rdf:type owl:DatatypeProperty ;
+                       rdfs:comment "Describes changes in production volumes, methods, or outputs, often in response to operational changes or market demand." .
+
+
+###  http://WSP.org/ontology/cro#changeInRawMaterial
+cro:changeInRawMaterial rdf:type owl:DatatypeProperty ;
+                        rdfs:comment "Indicates changes in the raw materials used, including changes in supply, type, or quality." .
+
+
+###  http://WSP.org/ontology/cro#changeInSales
+cro:changeInSales rdf:type owl:DatatypeProperty ;
+                  rdfs:comment "Records changes in sales figures or projections, often linked to changes in production or market conditions." .
+
+
+###  http://WSP.org/ontology/cro#changeName
+cro:changeName rdf:type owl:DatatypeProperty ;
+               rdfs:comment "Identifies wether the change is an Organiational Change, a system change, a change to raw materials, production or sales, a change to equipment and facilities, a change to external environment or a change to a specific sritical risk scenario." .
+
+
+###  http://WSP.org/ontology/cro#checkedBy
+cro:checkedBy rdf:type owl:DatatypeProperty ;
+              rdfs:comment "Specifies the individual or entity responsible for reviewing and verifying a document, report, or process." .
+
+
+###  http://WSP.org/ontology/cro#classification
+cro:classification rdf:type owl:DatatypeProperty ;
+                   rdfs:comment "Represents the classification of a recommendation." .
+
+
+###  http://WSP.org/ontology/cro#completeRecommendationNumber
+cro:completeRecommendationNumber rdf:type owl:DatatypeProperty ;
+                                 rdfs:comment "Represents the number of completed recommendations." .
+
+
+###  http://WSP.org/ontology/cro#constructionMethod
+cro:constructionMethod rdf:type owl:DatatypeProperty .
+
+
+###  http://WSP.org/ontology/cro#contactDescription
+cro:contactDescription rdf:type owl:DatatypeProperty ;
+                       rdfs:comment "Discussions and/or inspections took place on site with the following personnel" .
+
+
+###  http://WSP.org/ontology/cro#contactName
+cro:contactName rdf:type owl:DatatypeProperty .
+
+
+###  http://WSP.org/ontology/cro#contactRole
+cro:contactRole rdf:type owl:DatatypeProperty .
+
+
+###  http://WSP.org/ontology/cro#criticaRiskScenarioDefinition
+cro:criticaRiskScenarioDefinition rdf:type owl:DatatypeProperty ;
+                                  rdfs:comment "The definition of a Critical Risk Scenario as stated by the CRA Report." .
+
+
+###  http://WSP.org/ontology/cro#criticalRiskScenarioChangeFromPrevious
+cro:criticalRiskScenarioChangeFromPrevious rdf:type owl:DatatypeProperty ;
+                                           rdfs:comment "States what changed in the Critical Risk Scenario in comparisson to the previous one, highlighting any updates or modifications." .
+
+
+###  http://WSP.org/ontology/cro#criticalRiskScenarioID
+cro:criticalRiskScenarioID rdf:type owl:DatatypeProperty ;
+                           rdfs:subPropertyOf owl:topDataProperty ;
+                           rdfs:comment "A unique identifier for each critical risk scenario, used for tracking and reference purposes, such as \"DPO-##\"" ,
+                                        "The Identification number or ID for the critical risk scenario. Normally an acronym follower by a number. For Dampier Port, the IDs are: DPO-##" .
+
+
+###  http://WSP.org/ontology/cro#currentSurveyRatingSummaryPercentage
+cro:currentSurveyRatingSummaryPercentage rdf:type owl:DatatypeProperty .
+
+
+###  http://WSP.org/ontology/cro#currentSurveySubElementScore
+cro:currentSurveySubElementScore rdf:type owl:DatatypeProperty .
+
+
+###  http://WSP.org/ontology/cro#currentSurveySystemPercentage
+cro:currentSurveySystemPercentage rdf:type owl:DatatypeProperty .
+
+
+###  http://WSP.org/ontology/cro#dateCompletedSupersededRejected
+cro:dateCompletedSupersededRejected rdf:type owl:DatatypeProperty ;
+                                    rdfs:comment "Represents the date a recommendation was completed, suspended, or rejected." .
+
+
+###  http://WSP.org/ontology/cro#dependencyDefinition
+cro:dependencyDefinition rdf:type owl:DatatypeProperty ;
+                         rdfs:comment "The various dependencies of the site on external providers have been considered." .
+
+
+###  http://WSP.org/ontology/cro#designCapacity
+cro:designCapacity rdf:type owl:DatatypeProperty .
+
+
+###  http://WSP.org/ontology/cro#designDate
+cro:designDate rdf:type owl:DatatypeProperty .
+
+
+###  http://WSP.org/ontology/cro#designMaterialSpecification
+cro:designMaterialSpecification rdf:type owl:DatatypeProperty ;
+                                rdfs:comment "The materials and design specifications used in the construction of the transmission lines or substations, ensuring they meet required standards." .
+
+
+###  http://WSP.org/ontology/cro#dimensions
+cro:dimensions rdf:type owl:DatatypeProperty .
+
+
+###  http://WSP.org/ontology/cro#distributionSystemDescription
+cro:distributionSystemDescription rdf:type owl:DatatypeProperty ;
+                                  rdfs:comment "A description of the distribution system in the electrical network." .
+
+
+###  http://WSP.org/ontology/cro#distributionSystemName
+cro:distributionSystemName rdf:type owl:DatatypeProperty ;
+                           rdfs:comment "The name assigned to the distribution system in the network." .
+
+
+###  http://WSP.org/ontology/cro#divisionDescription
+cro:divisionDescription rdf:type owl:DatatypeProperty ;
+                        rdfs:comment "A detailed description of the division within a company, outlining its responsibilities, scope of work, and key objectives." .
+
+
+###  http://WSP.org/ontology/cro#dredgeDepth
+cro:dredgeDepth rdf:type owl:DatatypeProperty ;
+                rdfs:comment "The depth to which a berth or channel has been dredged, important for determining vessel accommodation." .
+
+
+###  http://WSP.org/ontology/cro#earthquakeZone
+cro:earthquakeZone rdf:type owl:DatatypeProperty ;
+                   rdfs:comment "Indicates the earthquake zone classification for a given location, used in risk assessments." .
+
+
+###  http://WSP.org/ontology/cro#electricityDemand
+cro:electricityDemand rdf:type owl:DatatypeProperty ;
+                      rdfs:comment "The amount of electricity required by a process or location to operate effectively, typically measured in kilowatts or megawatts." .
+
+
+###  http://WSP.org/ontology/cro#embankmentHeight
+cro:embankmentHeight rdf:type owl:DatatypeProperty .
+
+
+###  http://WSP.org/ontology/cro#embankmentLength
+cro:embankmentLength rdf:type owl:DatatypeProperty .
+
+
+###  http://WSP.org/ontology/cro#engineCapacity
+cro:engineCapacity rdf:type owl:DatatypeProperty ;
+                   rdfs:comment "Represents the capacity of the engine, usually in terms of power output." .
+
+
+###  http://WSP.org/ontology/cro#engineModel
+cro:engineModel rdf:type owl:DatatypeProperty ;
+                rdfs:comment "The specific model of the engine used in turbines or generators." .
+
+
+###  http://WSP.org/ontology/cro#equipmentChangeDescription
+cro:equipmentChangeDescription rdf:type owl:DatatypeProperty ;
+                               rdfs:comment "A detailed description of the changes made to equipment, including replacements, upgrades, or maintenance." .
+
+
+###  http://WSP.org/ontology/cro#equipmentChanged
+cro:equipmentChanged rdf:type owl:DatatypeProperty ;
+                     rdfs:comment "Indicates what secific equipment has undergone a change since the last assessment." .
+
+
+###  http://WSP.org/ontology/cro#equipmentDescription
+cro:equipmentDescription rdf:type owl:DatatypeProperty ;
+                         rdfs:comment "A description of the equipment, including its function, specifications, and operational context." .
+
+
+###  http://WSP.org/ontology/cro#equipmentName
+cro:equipmentName rdf:type owl:DatatypeProperty ;
+                  rdfs:comment "The designated name of the equipment, used within inventory systems to track and manage assets." .
+
+
+###  http://WSP.org/ontology/cro#equipmentReplacedDate
+cro:equipmentReplacedDate rdf:type owl:DatatypeProperty ;
+                          rdfs:comment "The date on which the equipment was replaced, used for maintenance records and lifecycle management." .
+
+
+###  http://WSP.org/ontology/cro#equipmentType
+cro:equipmentType rdf:type owl:DatatypeProperty ;
+                  rdfs:comment "Type of Equipment refers to what kind of equipment the individual is: Car, Vessel, etc" .
+
+
+###  http://WSP.org/ontology/cro#estimatedCost
+cro:estimatedCost rdf:type owl:DatatypeProperty ;
+                  rdfs:comment "The estimated cost of implementing the recommendation." .
+
+
+###  http://WSP.org/ontology/cro#expectedFailureDate
+cro:expectedFailureDate rdf:type owl:DatatypeProperty .
+
+
+###  http://WSP.org/ontology/cro#expenditure
+cro:expenditure rdf:type owl:DatatypeProperty ;
+                rdfs:comment "Represents the expenditure related to a recommendation." .
+
+
+###  http://WSP.org/ontology/cro#extratropicalCycloner
+cro:extratropicalCycloner rdf:type owl:DatatypeProperty .
+
+
+###  http://WSP.org/ontology/cro#facilityChangeDescription
+cro:facilityChangeDescription rdf:type owl:DatatypeProperty ;
+                              rdfs:comment "A description of the changes made to a facility, such as upgrades, repairs, or modifications." .
+
+
+###  http://WSP.org/ontology/cro#facilityChanged
+cro:facilityChanged rdf:type owl:DatatypeProperty ;
+                    rdfs:comment "Indicates what specific facility has undergone significant changes since the last assessment." .
+
+
+###  http://WSP.org/ontology/cro#facilityDescription
+cro:facilityDescription rdf:type owl:DatatypeProperty ;
+                        rdfs:comment "A detailed description of the facility, outlining its purpose, operations, and key features." .
+
+
+###  http://WSP.org/ontology/cro#facilityName
+cro:facilityName rdf:type owl:DatatypeProperty ;
+                 rdfs:comment "The name of the facility, identifying it within the operation." .
+
+
+###  http://WSP.org/ontology/cro#finalProductDescription
+cro:finalProductDescription rdf:type owl:DatatypeProperty .
+
+
+###  http://WSP.org/ontology/cro#fireSupressionCondition
+cro:fireSupressionCondition rdf:type owl:DatatypeProperty ;
+                            rdfs:comment "The current state or condition of the fire suppression systems within the substation, critical for ensuring safety and compliance." .
+
+
+###  http://WSP.org/ontology/cro#flood
+cro:flood rdf:type owl:DatatypeProperty ;
+          rdfs:comment "Indicates the flood risk or history for a specific location, used in environmental and risk assessments." .
+
+
+###  http://WSP.org/ontology/cro#generalInformationDescription
+cro:generalInformationDescription rdf:type owl:DatatypeProperty .
+
+
+###  http://WSP.org/ontology/cro#generalNotes
+cro:generalNotes rdf:type owl:DatatypeProperty ;
+                 rdfs:comment "General information about SURVEY AND REPORT DETAILS, such as abbreviations, estimated time periods, etc." .
+
+
+###  http://WSP.org/ontology/cro#generatorCapacity
+cro:generatorCapacity rdf:type owl:DatatypeProperty ;
+                      rdfs:comment "The maximum electrical output capacity of a generator." .
+
+
+###  http://WSP.org/ontology/cro#grade
+cro:grade rdf:type owl:DatatypeProperty .
+
+
+###  http://WSP.org/ontology/cro#hardControls
+cro:hardControls rdf:type owl:DatatypeProperty .
+
+
+###  http://WSP.org/ontology/cro#hasAddress
+cro:hasAddress rdf:type owl:DatatypeProperty ;
+               rdfs:comment "The physical address of the operation or facility, used for location and correspondence purposes." .
+
+
+###  http://WSP.org/ontology/cro#hasBusiness
+cro:hasBusiness rdf:type owl:DatatypeProperty ;
+                rdfs:comment "Describes the nature or type of business conducted by a company, such as manufacturing, consulting, or logistics." .
+
+
+###  http://WSP.org/ontology/cro#hasCRADate
+cro:hasCRADate rdf:type owl:DatatypeProperty ;
+               rdfs:comment "The date when the Critical Risk Assessment (CRA) was created or last updated." .
+
+
+###  http://WSP.org/ontology/cro#hasCRAType
+cro:hasCRAType rdf:type owl:DatatypeProperty ;
+               rdfs:comment "Specifies the type of Critical Risk Assessment (CRA), such as MFL, NLE, etc" ,
+                            "Specifies the type of Critical Risk Assessment (CRA), such as a safety or environmental risk assessment." .
+
+
+###  http://WSP.org/ontology/cro#hasCompanyName
+cro:hasCompanyName rdf:type owl:DatatypeProperty ;
+                   rdfs:comment "The official name of the company, used for identification and legal purposes." .
+
+
+###  http://WSP.org/ontology/cro#hasDate
+cro:hasDate rdf:type owl:DatatypeProperty ;
+            rdfs:comment "A general date property, used to capture important dates related to incidents, changes, or assessments." .
+
+
+###  http://WSP.org/ontology/cro#hasDateOfIssue
+cro:hasDateOfIssue rdf:type owl:DatatypeProperty ;
+                   rdfs:comment "The date on which a document, report, or directive was officially issued." .
+
+
+###  http://WSP.org/ontology/cro#hasDateOfSurvey
+cro:hasDateOfSurvey rdf:type owl:DatatypeProperty ;
+                    rdfs:comment "The date on which the survey or assessment was conducted, typically associated with a Critical Risk Assessment (CRA)." ,
+                                 "The date on which the survey or assessment was conducted." .
+
+
+###  http://WSP.org/ontology/cro#hasEmail
+cro:hasEmail rdf:type owl:DatatypeProperty ;
+             rdfs:comment "The email address of an employee, used for communication within the company." .
+
+
+###  http://WSP.org/ontology/cro#hasEmployeeEmail
+cro:hasEmployeeEmail rdf:type owl:DatatypeProperty ;
+                     rdfs:comment "The email address of an employee, used for communication within the company." .
+
+
+###  http://WSP.org/ontology/cro#hasEmployeePhoneNumber
+cro:hasEmployeePhoneNumber rdf:type owl:DatatypeProperty ;
+                           rdfs:comment "The phone number of an employee, used for contact and communication within the company." .
+
+
+###  http://WSP.org/ontology/cro#hasFirstName
+cro:hasFirstName rdf:type owl:DatatypeProperty ;
+                 rdfs:comment "The first name of an employee, used for identification within the company." .
+
+
+###  http://WSP.org/ontology/cro#hasLastName
+cro:hasLastName rdf:type owl:DatatypeProperty ;
+                rdfs:comment "The last name of an employee, used for identification within the company." .
+
+
+###  http://WSP.org/ontology/cro#hasLatitude
+cro:hasLatitude rdf:type owl:DatatypeProperty ;
+                rdfs:comment "The geographic latitude of the facility or operation, used for mapping and location purposes." .
+
+
+###  http://WSP.org/ontology/cro#hasLongitude
+cro:hasLongitude rdf:type owl:DatatypeProperty ;
+                 rdfs:comment "The geographic longitude of the facility or operation, used for mapping and location purposes." .
+
+
+###  http://WSP.org/ontology/cro#hasName
+cro:hasName rdf:type owl:DatatypeProperty .
+
+
+###  http://WSP.org/ontology/cro#hasPhone
+cro:hasPhone rdf:type owl:DatatypeProperty ;
+             rdfs:comment "The contact phone number associated with the Process Control Automation System, typically used for support or emergency contact." ,
+                          "The phone number associated with the operation, facility, or division, used for contact purposes." .
+
+
+###  http://WSP.org/ontology/cro#hasRevisionDetail
+cro:hasRevisionDetail rdf:type owl:DatatypeProperty ;
+                      rdfs:comment "The details associated with the revision of a document, report, or assessment, outlining what changes or updates were made." .
+
+
+###  http://WSP.org/ontology/cro#highReturnNewRecommendations
+cro:highReturnNewRecommendations rdf:type owl:DatatypeProperty ;
+                                 rdfs:comment "Represents the number of new recommendations with a high return." .
+
+
+###  http://WSP.org/ontology/cro#inProgressRecommendationNumber
+cro:inProgressRecommendationNumber rdf:type owl:DatatypeProperty ;
+                                   rdfs:comment "Represents the number of recommendations that are currently in progress." .
+
+
+###  http://WSP.org/ontology/cro#incidentDescription
+cro:incidentDescription rdf:type owl:DatatypeProperty ;
+                        rdfs:subPropertyOf owl:topDataProperty ;
+                        rdfs:comment "A narrative description of a specific incident, including what occurred, its impact, and any resulting actions." ,
+                                     "Provides a detailed description of the incident." .
+
+
+###  http://WSP.org/ontology/cro#incidentName
+cro:incidentName rdf:type owl:DatatypeProperty ;
+                 rdfs:comment "The name or title given to a specific incident, used for identification and tracking purposes." .
+
+
+###  http://WSP.org/ontology/cro#incidentSummary
+cro:incidentSummary rdf:type owl:DatatypeProperty ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "A summary of the incident in the critical risk scenario." ,
+                                 "Contains a summary of an incident in a critical risk scenario." .
+
+
+###  http://WSP.org/ontology/cro#incrementalImprovementNumber
+cro:incrementalImprovementNumber rdf:type owl:DatatypeProperty ;
+                                 rdfs:comment "Represents the number of incremental improvements." .
+
+
+###  http://WSP.org/ontology/cro#inherentControls
+cro:inherentControls rdf:type owl:DatatypeProperty .
+
+
+###  http://WSP.org/ontology/cro#inherentHazards
+cro:inherentHazards rdf:type owl:DatatypeProperty .
+
+
+###  http://WSP.org/ontology/cro#inloadingDescription
+cro:inloadingDescription rdf:type owl:DatatypeProperty ;
+                         rdfs:comment "A description of the inloading process, detailing how materials are dispatched from the facility." .
+
+
+###  http://WSP.org/ontology/cro#inloadsMaterialFrom
+cro:inloadsMaterialFrom rdf:type owl:DatatypeProperty ;
+                        rdfs:comment "Indicates the source of materials being inloaded into the facility or terminal." .
+
+
+###  http://WSP.org/ontology/cro#inputVoltage
+cro:inputVoltage rdf:type owl:DatatypeProperty ;
+                 rdfs:comment "Represents the input and output voltage of transformers or other electrical components." .
+
+
+###  http://WSP.org/ontology/cro#installationDate
+cro:installationDate rdf:type owl:DatatypeProperty ;
+                     rdfs:comment "The date when a particular component, such as a transmission line or transformer, was installed." .
+
+
+###  http://WSP.org/ontology/cro#likelihood
+cro:likelihood rdf:type owl:DatatypeProperty ;
+               rdfs:range xsd:string ;
+               rdfs:comment "Likelihood of the critical risk scenario occurring." ,
+                            "Represents the likelihood of a critical risk scenario occurring." ,
+                            "The likelihood of the recommendation's success." .
+
+
+###  http://WSP.org/ontology/cro#likelihoodAfterRecommendation
+cro:likelihoodAfterRecommendation rdf:type owl:DatatypeProperty .
+
+
+###  http://WSP.org/ontology/cro#likelihoodNow
+cro:likelihoodNow rdf:type owl:DatatypeProperty .
+
+
+###  http://WSP.org/ontology/cro#lossEstimateAfterRecommendationUSDM
+cro:lossEstimateAfterRecommendationUSDM rdf:type owl:DatatypeProperty ;
+                                        rdfs:comment "Represents the loss estimate after the recommendation in USD." .
+
+
+###  http://WSP.org/ontology/cro#lossEstimateNowUSDM
+cro:lossEstimateNowUSDM rdf:type owl:DatatypeProperty ;
+                        rdfs:comment "Represents the current loss estimate in USD." .
+
+
+###  http://WSP.org/ontology/cro#lossScenarioPeril
+cro:lossScenarioPeril rdf:type owl:DatatypeProperty ;
+                      rdfs:range xsd:string ;
+                      rdfs:comment "Peril or hazard causing the loss." ,
+                                   "Represents the peril associated with a loss scenario." .
+
+
+###  http://WSP.org/ontology/cro#lossUsdm
+cro:lossUsdm rdf:type owl:DatatypeProperty ;
+             rdfs:comment "The loss in USD millions associated with the recommendation." .
+
+
+###  http://WSP.org/ontology/cro#mandarotyNewRecommendations
+cro:mandarotyNewRecommendations rdf:type owl:DatatypeProperty .
+
+
+###  http://WSP.org/ontology/cro#materialHandled
+cro:materialHandled rdf:type owl:DatatypeProperty ;
+                    rdfs:comment "Describes the type of material handled by the facility or terminal, such as ore, grain, or liquid cargo." .
+
+
+###  http://WSP.org/ontology/cro#materialHandledAmount
+cro:materialHandledAmount rdf:type owl:DatatypeProperty ;
+                          rdfs:comment "The quantity of material handled by a facility or terminal, typically measured in tons or similar units." .
+
+
+###  http://WSP.org/ontology/cro#mediumReturnNewRecommendations
+cro:mediumReturnNewRecommendations rdf:type owl:DatatypeProperty ;
+                                   rdfs:comment "Represents the number of new recommendations with a medium return." .
+
+
+###  http://WSP.org/ontology/cro#mineLocation
+cro:mineLocation rdf:type owl:DatatypeProperty .
+
+
+###  http://WSP.org/ontology/cro#mineName
+cro:mineName rdf:type owl:DatatypeProperty .
+
+
+###  http://WSP.org/ontology/cro#mineType
+cro:mineType rdf:type owl:DatatypeProperty .
+
+
+###  http://WSP.org/ontology/cro#networkDescription
+cro:networkDescription rdf:type owl:DatatypeProperty ;
+                       rdfs:comment "A description of the overall power network and its components." .
+
+
+###  http://WSP.org/ontology/cro#networkName
+cro:networkName rdf:type owl:DatatypeProperty ;
+                rdfs:comment "The name of the power network." .
+
+
+###  http://WSP.org/ontology/cro#numberOfContractors
+cro:numberOfContractors rdf:type owl:DatatypeProperty ;
+                        rdfs:comment "Specifies the number of contractors involved in an operation or project, providing insight into the scale of external workforce involvement." .
+
+
+###  http://WSP.org/ontology/cro#numberOfEmployees
+cro:numberOfEmployees rdf:type owl:DatatypeProperty .
+
+
+###  http://WSP.org/ontology/cro#numberOfPanels
+cro:numberOfPanels rdf:type owl:DatatypeProperty .
+
+
+###  http://WSP.org/ontology/cro#numberOfShafts
+cro:numberOfShafts rdf:type owl:DatatypeProperty .
+
+
+###  http://WSP.org/ontology/cro#operationCriticalReliance
+cro:operationCriticalReliance rdf:type owl:DatatypeProperty ;
+                              rdfs:comment "Indicates the degree to which an operation relies on a specific substation or transmission line, particularly in terms of critical load and redundancy." .
+
+
+###  http://WSP.org/ontology/cro#operationDescription
+cro:operationDescription rdf:type owl:DatatypeProperty ;
+                         rdfs:comment "A detailed description of the operation, covering its scope, activities, and objectives." .
+
+
+###  http://WSP.org/ontology/cro#oreBodyName
+cro:oreBodyName rdf:type owl:DatatypeProperty .
+
+
+###  http://WSP.org/ontology/cro#oreTypeProcessed
+cro:oreTypeProcessed rdf:type owl:DatatypeProperty .
+
+
+###  http://WSP.org/ontology/cro#organisationalChangeDescription
+cro:organisationalChangeDescription rdf:type owl:DatatypeProperty ;
+                                    rdfs:comment "A narrative detailing the changes in the organizational structure, such as new appointments or reorganization." .
+
+
+###  http://WSP.org/ontology/cro#otherCostsUSDM
+cro:otherCostsUSDM rdf:type owl:DatatypeProperty ;
+                   rdfs:comment "Represents other costs in USD from a critical risk scenario." .
+
+
+###  http://WSP.org/ontology/cro#otherDependenciesDescription
+cro:otherDependenciesDescription rdf:type owl:DatatypeProperty .
+
+
+###  http://WSP.org/ontology/cro#outloadingDescription
+cro:outloadingDescription rdf:type owl:DatatypeProperty ;
+                          rdfs:comment "A description of the outloading process, detailing how materials are dispatched from the facility." .
+
+
+###  http://WSP.org/ontology/cro#outloadsMaterialTo
+cro:outloadsMaterialTo rdf:type owl:DatatypeProperty ;
+                       rdfs:comment "Specifies the destination to which materials are outloaded from the facility or terminal." .
+
+
+###  http://WSP.org/ontology/cro#outputVoltage
+cro:outputVoltage rdf:type owl:DatatypeProperty ;
+                  rdfs:comment "The voltage output by a transformer or generator." .
+
+
+###  http://WSP.org/ontology/cro#portName
+cro:portName rdf:type owl:DatatypeProperty ;
+             rdfs:comment "The name of the port, used to identify the specific port within broader operations." .
+
+
+###  http://WSP.org/ontology/cro#positionAccountable
+cro:positionAccountable rdf:type owl:DatatypeProperty ;
+                        rdfs:comment "Represents the accountable position for a recommendation." .
+
+
+###  http://WSP.org/ontology/cro#powerDemand
+cro:powerDemand rdf:type owl:DatatypeProperty ;
+                rdfs:comment "Indicates the amount of power required by a facility, process, or operation, typically measured in kilowatts or megawatts." .
+
+
+###  http://WSP.org/ontology/cro#powerStationCapacity
+cro:powerStationCapacity rdf:type owl:DatatypeProperty ;
+                         rdfs:comment "The electrical capacity of the power station, typically in megawatts (MW)." .
+
+
+###  http://WSP.org/ontology/cro#powerStationDescription
+cro:powerStationDescription rdf:type owl:DatatypeProperty ;
+                            rdfs:comment "A description of the power station and its components." .
+
+
+###  http://WSP.org/ontology/cro#powerStationLocation
+cro:powerStationLocation rdf:type owl:DatatypeProperty ;
+                         rdfs:comment "The physical location of the power station." .
+
+
+###  http://WSP.org/ontology/cro#powerStationName
+cro:powerStationName rdf:type owl:DatatypeProperty ;
+                     rdfs:comment "The name assigned to the power station." .
+
+
+###  http://WSP.org/ontology/cro#powerStationType
+cro:powerStationType rdf:type owl:DatatypeProperty ;
+                     rdfs:comment "The type of the power station, such as gas-powered or diesel-powered." .
+
+
+###  http://WSP.org/ontology/cro#preincident_and_workaroundARP
+cro:preincident_and_workaroundARP rdf:type owl:DatatypeProperty .
+
+
+###  http://WSP.org/ontology/cro#previousSurveyRatingSummaryPercentage
+cro:previousSurveyRatingSummaryPercentage rdf:type owl:DatatypeProperty .
+
+
+###  http://WSP.org/ontology/cro#previousSurveySubElementScore
+cro:previousSurveySubElementScore rdf:type owl:DatatypeProperty .
+
+
+###  http://WSP.org/ontology/cro#previousSurveySystemPercentage
+cro:previousSurveySystemPercentage rdf:type owl:DatatypeProperty .
+
+
+###  http://WSP.org/ontology/cro#priority
+cro:priority rdf:type owl:DatatypeProperty ;
+             rdfs:comment "The priority level of the recommendation." .
+
+
+###  http://WSP.org/ontology/cro#processDescription
+cro:processDescription rdf:type owl:DatatypeProperty ;
+                       rdfs:comment "A detailed description of a specific process within a facility or operation, outlining the steps, objectives, and key activities involved." .
+
+
+###  http://WSP.org/ontology/cro#projectCompletionDate
+cro:projectCompletionDate rdf:type owl:DatatypeProperty ;
+                          rdfs:comment "The anticipated or actual date when the Project is expected to be completed." .
+
+
+###  http://WSP.org/ontology/cro#projectDescription
+cro:projectDescription rdf:type owl:DatatypeProperty ;
+                       rdfs:comment "A detailed narrative describing the scope, objectives, and key components of the Project." .
+
+
+###  http://WSP.org/ontology/cro#projectName
+cro:projectName rdf:type owl:DatatypeProperty ;
+                rdfs:comment "Name of the project" .
+
+
+###  http://WSP.org/ontology/cro#propertyDamageUSDM
+cro:propertyDamageUSDM rdf:type owl:DatatypeProperty ;
+                       rdfs:comment "Represents the property damage in USD from a critical risk scenario." .
+
+
+###  http://WSP.org/ontology/cro#rawMaterialDescription
+cro:rawMaterialDescription rdf:type owl:DatatypeProperty ;
+                           rdfs:comment "Description of any raw material the site is dependent upon." .
+
+
+###  http://WSP.org/ontology/cro#rawMaterialName
+cro:rawMaterialName rdf:type owl:DatatypeProperty ;
+                    rdfs:comment "Name of any raw material the site is dependent upon." .
+
+
+###  http://WSP.org/ontology/cro#recievesMaterialFrom
+cro:recievesMaterialFrom rdf:type owl:DatatypeProperty ;
+                         rdfs:comment "Specifies the source from which the facility or terminal receives materials, such as another facility or port." .
+
+
+###  http://WSP.org/ontology/cro#recommendationDefinition
+cro:recommendationDefinition rdf:type owl:DatatypeProperty .
+
+
+###  http://WSP.org/ontology/cro#recommendationDescription
+cro:recommendationDescription rdf:type owl:DatatypeProperty ;
+                              rdfs:comment "The description of a recommendation for a Critical Risk Scenario." .
+
+
+###  http://WSP.org/ontology/cro#recommendationDetailText
+cro:recommendationDetailText rdf:type owl:DatatypeProperty ;
+                             rdfs:comment "Contains the detailed description of a recommendation." .
+
+
+###  http://WSP.org/ontology/cro#recommendationEstimatedCostUSDM
+cro:recommendationEstimatedCostUSDM rdf:type owl:DatatypeProperty ;
+                                    rdfs:comment "Represents the estimated cost of a recommendation." .
+
+
+###  http://WSP.org/ontology/cro#recommendationImprovement
+cro:recommendationImprovement rdf:type owl:DatatypeProperty ;
+                              rdfs:comment "Represents the improvement made by a recommendation." .
+
+
+###  http://WSP.org/ontology/cro#recommendationPriority
+cro:recommendationPriority rdf:type owl:DatatypeProperty .
+
+
+###  http://WSP.org/ontology/cro#recommendationStatus
+cro:recommendationStatus rdf:type owl:DatatypeProperty .
+
+
+###  http://WSP.org/ontology/cro#recommendationYear
+cro:recommendationYear rdf:type owl:DatatypeProperty ;
+                       rdfs:comment "Represents the year the recommendation was made." .
+
+
+###  http://WSP.org/ontology/cro#recommendationsCompletedSinceLastReview
+cro:recommendationsCompletedSinceLastReview rdf:type owl:DatatypeProperty .
+
+
+###  http://WSP.org/ontology/cro#recoveryRepair
+cro:recoveryRepair rdf:type owl:DatatypeProperty ;
+                   rdfs:comment "Describes the recovery or repair process after an incident." .
+
+
+###  http://WSP.org/ontology/cro#referenceDocumentDescription
+cro:referenceDocumentDescription rdf:type owl:DatatypeProperty .
+
+
+###  http://WSP.org/ontology/cro#referenceNumber
+cro:referenceNumber rdf:type owl:DatatypeProperty ;
+                    rdfs:comment "The reference number for the recommendation." .
+
+
+###  http://WSP.org/ontology/cro#region
+cro:region rdf:type owl:DatatypeProperty ;
+           rdfs:comment "The geographical region where the power network or component is located." .
+
+
+###  http://WSP.org/ontology/cro#rejectedRecommendationDescription
+cro:rejectedRecommendationDescription rdf:type owl:DatatypeProperty ;
+                                      rdfs:comment "Represents the description of a rejected recommendation." .
+
+
+###  http://WSP.org/ontology/cro#rejectedRecommendationNumber
+cro:rejectedRecommendationNumber rdf:type owl:DatatypeProperty ;
+                                 rdfs:comment "Represents the number of rejected recommendations." .
+
+
+###  http://WSP.org/ontology/cro#repairPeriod
+cro:repairPeriod rdf:type owl:DatatypeProperty ;
+                 rdfs:comment "Represents the repair period duration after an incident." .
+
+
+###  http://WSP.org/ontology/cro#retiredInYear
+cro:retiredInYear rdf:type owl:DatatypeProperty ;
+                  rdfs:comment "The year in which the Process Control Automation System or its components were decommissioned or retired from active service." .
+
+
+###  http://WSP.org/ontology/cro#riskLikelihoodClassification
+cro:riskLikelihoodClassification rdf:type owl:DatatypeProperty ;
+                                 rdfs:comment "The likelihood of the risks has been assigned one of five classifications; “Almost Certain”, “Likely”, “Possible”, “Unlikely”, “Rare”." .
+
+
+###  http://WSP.org/ontology/cro#riskManagementSubElementInformation
+cro:riskManagementSubElementInformation rdf:type owl:DatatypeProperty .
+
+
+###  http://WSP.org/ontology/cro#runByDieselBoolean
+cro:runByDieselBoolean rdf:type owl:DatatypeProperty ;
+                       rdfs:comment "Indicates whether the engine runs on diesel (yes/no)." .
+
+
+###  http://WSP.org/ontology/cro#runByGasBoolean
+cro:runByGasBoolean rdf:type owl:DatatypeProperty ;
+                    rdfs:comment "Indicates whether the engine runs on natural gas (yes/no)." .
+
+
+###  http://WSP.org/ontology/cro#shape
+cro:shape rdf:type owl:DatatypeProperty .
+
+
+###  http://WSP.org/ontology/cro#significantChangeDescription
+cro:significantChangeDescription rdf:type owl:DatatypeProperty .
+
+
+###  http://WSP.org/ontology/cro#siteResponseOrComments
+cro:siteResponseOrComments rdf:type owl:DatatypeProperty ;
+                           rdfs:comment "Contains the site's response or comments on the recommendation." .
+
+
+###  http://WSP.org/ontology/cro#slopeAngle
+cro:slopeAngle rdf:type owl:DatatypeProperty .
+
+
+###  http://WSP.org/ontology/cro#softControls
+cro:softControls rdf:type owl:DatatypeProperty .
+
+
+###  http://WSP.org/ontology/cro#spillwayStatus
+cro:spillwayStatus rdf:type owl:DatatypeProperty .
+
+
+###  http://WSP.org/ontology/cro#status
+cro:status rdf:type owl:DatatypeProperty ;
+           rdfs:comment "The current status of the recommendation." .
+
+
+###  http://WSP.org/ontology/cro#stockpileCapacity
+cro:stockpileCapacity rdf:type owl:DatatypeProperty .
+
+
+###  http://WSP.org/ontology/cro#stormSurge
+cro:stormSurge rdf:type owl:DatatypeProperty ;
+               rdfs:comment "Indicates the risk or history of storm surges at a specific location, relevant for disaster planning and coastal risk assessments." .
+
+
+###  http://WSP.org/ontology/cro#subFacilityDescription
+cro:subFacilityDescription rdf:type owl:DatatypeProperty ;
+                           rdfs:comment "A detailed description of a sub-facility within a larger operation, outlining its specific role and functions." .
+
+
+###  http://WSP.org/ontology/cro#subFacilityName
+cro:subFacilityName rdf:type owl:DatatypeProperty ;
+                    rdfs:comment "The name assigned to a sub-facility, distinguishing it within the broader operation.\"" .
+
+
+###  http://WSP.org/ontology/cro#substationCondition
+cro:substationCondition rdf:type owl:DatatypeProperty ;
+                        rdfs:comment "The current condition of the substation (e.g., good, needs repair)." .
+
+
+###  http://WSP.org/ontology/cro#substationDescription
+cro:substationDescription rdf:type owl:DatatypeProperty ;
+                          rdfs:comment "A description of the substation and its components." ,
+                                       "A detailed description of the substation, including its function, components, and significance within the electrical network." .
+
+
+###  http://WSP.org/ontology/cro#substationInstallationDate
+cro:substationInstallationDate rdf:type owl:DatatypeProperty ;
+                               rdfs:comment "The date when the substation was installed." .
+
+
+###  http://WSP.org/ontology/cro#substationLocatedIn
+cro:substationLocatedIn rdf:type owl:DatatypeProperty ;
+                        rdfs:comment "The specific location or site where the substation is situated, typically within the context of a larger facility or operational area." .
+
+
+###  http://WSP.org/ontology/cro#substationName
+cro:substationName rdf:type owl:DatatypeProperty ;
+                   rdfs:comment "The name assigned to the substation." .
+
+
+###  http://WSP.org/ontology/cro#summaryText
+cro:summaryText rdf:type owl:DatatypeProperty ;
+                rdfs:comment "Contains the summary of a recommendation." .
+
+
+###  http://WSP.org/ontology/cro#supportNetwork
+cro:supportNetwork rdf:type owl:DatatypeProperty ;
+                   rdfs:comment "Indicates if the network supports other networks." ,
+                                "The auxiliary or backup network that supports the primary electrical infrastructure, providing redundancy and additional capacity when needed." .
+
+
+###  http://WSP.org/ontology/cro#suspendedRecommendationNumber
+cro:suspendedRecommendationNumber rdf:type owl:DatatypeProperty .
+
+
+###  http://WSP.org/ontology/cro#systemChangeDescription
+cro:systemChangeDescription rdf:type owl:DatatypeProperty ;
+                            rdfs:comment "A detailed description of the changes made to the systems within the operation, such as software updates or new system integrations." .
+
+
+###  http://WSP.org/ontology/cro#systemChangeName
+cro:systemChangeName rdf:type owl:DatatypeProperty ;
+                     rdfs:comment "The name or title given to a specific system change or upgrade." .
+
+
+###  http://WSP.org/ontology/cro#terminalName
+cro:terminalName rdf:type owl:DatatypeProperty ;
+                 rdfs:comment "The name of the terminal within the port, distinguishing it from other terminals." .
+
+
+###  http://WSP.org/ontology/cro#timeSinceLastIncident
+cro:timeSinceLastIncident rdf:type owl:DatatypeProperty ;
+                          rdfs:comment "The amount of time that has passed since the last significant incident occurred." .
+
+
+###  http://WSP.org/ontology/cro#tornado
+cro:tornado rdf:type owl:DatatypeProperty ;
+            rdfs:comment "Indicates the tornado risk or history for a specific location, used in environmental and risk assessments." .
+
+
+###  http://WSP.org/ontology/cro#totalElectricityDemand
+cro:totalElectricityDemand rdf:type owl:DatatypeProperty ;
+                           rdfs:comment "The overall electricity demand that the Project aims to support, accounting for both current and future infrastructure needs." ,
+                                        "The total electricity demand on the network." .
+
+
+###  http://WSP.org/ontology/cro#totalLossUSDM
+cro:totalLossUSDM rdf:type owl:DatatypeProperty .
+
+
+###  http://WSP.org/ontology/cro#totalRecommendationNumber
+cro:totalRecommendationNumber rdf:type owl:DatatypeProperty ;
+                              rdfs:comment "Represents the total number of recommendations." .
+
+
+###  http://WSP.org/ontology/cro#townName
+cro:townName rdf:type owl:DatatypeProperty ;
+             rdfs:comment "Name of the town" .
+
+
+###  http://WSP.org/ontology/cro#transmissionLineType
+cro:transmissionLineType rdf:type owl:DatatypeProperty ;
+                         rdfs:comment "The type of transmission line, such as overhead or underground, and its voltage level, important for understanding its capacity and role in the network." .
+
+
+###  http://WSP.org/ontology/cro#tropicalCyclone
+cro:tropicalCyclone rdf:type owl:DatatypeProperty ;
+                    rdfs:comment "Indicates the tropical cyclone risk or history for a specific location, used in environmental and risk assessments." .
+
+
+###  http://WSP.org/ontology/cro#underReviewRecommendationNumber
+cro:underReviewRecommendationNumber rdf:type owl:DatatypeProperty ;
+                                    rdfs:comment "Represents the number of recommendations under review." .
+
+
+###  http://WSP.org/ontology/cro#upgradeYear
+cro:upgradeYear rdf:type owl:DatatypeProperty ;
+                rdfs:comment "The year when a network component was last upgraded." .
+
+
+###  http://WSP.org/ontology/cro#upgradedBy
+cro:upgradedBy rdf:type owl:DatatypeProperty ;
+               rdfs:comment "The entity or person responsible for upgrading the component." .
+
+
+###  http://WSP.org/ontology/cro#utilityOrSupplyDescription
+cro:utilityOrSupplyDescription rdf:type owl:DatatypeProperty ;
+                               rdfs:comment "Any utilities of supplies that the site or operation depend on, such as water, electrocoty, gas, etc." .
+
+
+###  http://WSP.org/ontology/cro#utilityOrSupplyName
+cro:utilityOrSupplyName rdf:type owl:DatatypeProperty ;
+                        rdfs:comment "Description of any utilities of supplies that the site or operation depend on, such as water, electrocoty, gas, etc" .
+
+
+###  http://WSP.org/ontology/cro#ventilationAirflow
+cro:ventilationAirflow rdf:type owl:DatatypeProperty .
+
+
+###  http://WSP.org/ontology/cro#voltageLevel
+cro:voltageLevel rdf:type owl:DatatypeProperty ;
+                 rdfs:comment "The voltage level of the transmission line or substation." .
+
+
+###  http://WSP.org/ontology/cro#wasteRockDumpHeight
+cro:wasteRockDumpHeight rdf:type owl:DatatypeProperty .
+
+
+###  http://WSP.org/ontology/cro#workCommencedBoolean
+cro:workCommencedBoolean rdf:type owl:DatatypeProperty ;
+                         rdfs:comment "Specify whether the project work has started or not." .
+
+
+###  http://WSP.org/ontology/cro#workaround
+cro:workaround rdf:type owl:DatatypeProperty ;
+               rdfs:comment "Describes the workaround for handling an incident." .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://WSP.org/ontology/cro#AssumptionsAndBasis
+cro:AssumptionsAndBasis rdf:type owl:Class ;
+                        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                          owl:onProperty cro:assumptionDescription ;
+                                          owl:someValuesFrom xsd:string
+                                        ] ;
+                        rdfs:comment "Class representing assumptions and basis for risk analysis." .
+
+
+###  http://WSP.org/ontology/cro#AuditsAndReviews
+cro:AuditsAndReviews rdf:type owl:Class ;
+                     rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                       owl:onProperty cro:auditAndReviewDescription ;
+                                       owl:someValuesFrom xsd:string
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty cro:auditReviewName ;
+                                       owl:someValuesFrom xsd:string
+                                     ] ;
+                     rdfs:comment "Information on audits, compliance reviews, and assessments conducted since the last Critical Risk Assessment." .
+
+
+###  http://WSP.org/ontology/cro#Berthing
+cro:Berthing rdf:type owl:Class ;
+             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty cro:hasEquipment ;
+                               owl:someValuesFrom cro:Equipment
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty cro:berthName ;
+                               owl:someValuesFrom xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty cro:berthTerminal ;
+                               owl:someValuesFrom xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty cro:dredgeDepth ;
+                               owl:someValuesFrom xsd:decimal
+                             ] ;
+             rdfs:comment "Berthing refers to the process of securing vessels at a Port's docking facilities. This operation is crucial for the safe inloading and outloading of materials and involves the use of specialized Equipment." .
+
+
+###  http://WSP.org/ontology/cro#CatastrophicRiskScenariosWithLowProbabilityOverview
+cro:CatastrophicRiskScenariosWithLowProbabilityOverview rdf:type owl:Class ;
+                                                        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty cro:catastrophicRiskScenariowithLowProbability ;
+                                                                          owl:someValuesFrom xsd:string
+                                                                        ] ;
+                                                        rdfs:comment "The definition of a catastrophic risk scenario with low probability as stated by the CRA Report: Risk scenarios beyond the boundaries of reasonable probability are infinite as to their potential diversity and application. Hence, scenarios with an occurrence probability beyond the 100 years return period cut- off point in the Critical Risk Assessment model have been excluded." .
+
+
+###  http://WSP.org/ontology/cro#ChangeToRawMaterialsAndSales
+cro:ChangeToRawMaterialsAndSales rdf:type owl:Class ;
+                                 rdfs:subClassOf cro:SignificantChanges ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty cro:changeInProduction ;
+                                                   owl:someValuesFrom xsd:string
+                                                 ] ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty cro:changeInRawMaterial ;
+                                                   owl:someValuesFrom xsd:string
+                                                 ] ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty cro:changeInSales ;
+                                                   owl:someValuesFrom xsd:string
+                                                 ] ;
+                                 rdfs:comment "Updates regarding production volumes, sales forecasts, and changes in raw materials handling since the last assessment." .
+
+
+###  http://WSP.org/ontology/cro#ChangesToCriticalRiskScenarios
+cro:ChangesToCriticalRiskScenarios rdf:type owl:Class ;
+                                   rdfs:subClassOf cro:SignificantChanges ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty cro:changeInBusinessInterruption ;
+                                                     owl:someValuesFrom xsd:string
+                                                   ] ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty cro:changeInPortDescription ;
+                                                     owl:someValuesFrom xsd:string
+                                                   ] ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty cro:criticalRiskScenarioChangeFromPrevious ;
+                                                     owl:someValuesFrom xsd:string
+                                                   ] ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty cro:criticalRiskScenarioID ;
+                                                     owl:someValuesFrom xsd:string
+                                                   ] ;
+                                   rdfs:comment "Modifications or updates to the critical risk scenarios and business interruption based on new data or operational changes." .
+
+
+###  http://WSP.org/ontology/cro#ChangesToEquipmentAndFacilities
+cro:ChangesToEquipmentAndFacilities rdf:type owl:Class ;
+                                    rdfs:subClassOf cro:SignificantChanges ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty cro:equipmentChangeDescription ;
+                                                      owl:someValuesFrom xsd:string
+                                                    ] ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty cro:equipmentChanged ;
+                                                      owl:someValuesFrom xsd:string
+                                                    ] ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty cro:facilityChangeDescription ;
+                                                      owl:someValuesFrom xsd:string
+                                                    ] ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty cro:facilityChanged ;
+                                                      owl:someValuesFrom xsd:string
+                                                    ] ;
+                                    rdfs:comment "Details of upgrades, repairs, and significant works on equipment and facilities that have occurred or are planned." .
+
+
+###  http://WSP.org/ontology/cro#Company
+cro:Company rdf:type owl:Class ;
+            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                              owl:onProperty cro:hasDivision ;
+                              owl:someValuesFrom cro:Division
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty cro:hasEmployee ;
+                              owl:someValuesFrom cro:Employee
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty cro:hasBusiness ;
+                              owl:someValuesFrom xsd:string
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty cro:hasCompanyName ;
+                              owl:someValuesFrom xsd:string
+                            ] ;
+            rdfs:comment "Company refers to the entity that owns or participates in the operation, including owners, consultants, and other stakeholders. Companies can have divisions responsible for different aspects of the operation. They also manage CRAs (Critical Risk Assessments) and related data." .
+
+
+###  http://WSP.org/ontology/cro#Contacts
+cro:Contacts rdf:type owl:Class ;
+             rdfs:subClassOf cro:SurveyAndReportDetails ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty cro:contactName ;
+                               owl:someValuesFrom xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty cro:contactRole ;
+                               owl:someValuesFrom xsd:string
+                             ] ;
+             rdfs:comment "Class representing contact information." .
+
+
+###  http://WSP.org/ontology/cro#CriticalRiskAssesmentReport
+cro:CriticalRiskAssesmentReport rdf:type owl:Class ;
+                                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                  owl:onProperty cro:distributedTo ;
+                                                  owl:someValuesFrom cro:Employee
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty cro:hasAuditsAndReviews ;
+                                                  owl:someValuesFrom cro:AuditsAndReviews
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty cro:hasCriticalRiskScenarioOverview ;
+                                                  owl:someValuesFrom cro:CriticalRiskSectionOverview
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty cro:hasIdentifiedRecommendations ;
+                                                  owl:someValuesFrom cro:Recommendation
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty cro:hasRevision ;
+                                                  owl:someValuesFrom cro:Revision
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty cro:hasRiskManagementSystem ;
+                                                  owl:someValuesFrom cro:RiskManagementSystem
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty cro:hasSignificantChanges ;
+                                                  owl:someValuesFrom cro:SignificantChanges
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty cro:hasSignificantIncidents ;
+                                                  owl:someValuesFrom cro:SignificantIncident
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty cro:hasSurveyAndReportDetails ;
+                                                  owl:someValuesFrom cro:SurveyAndReportDetails
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty cro:preparedBy ;
+                                                  owl:someValuesFrom cro:Employee
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty cro:currentSurveyRatingSummaryPercentage ;
+                                                  owl:someValuesFrom xsd:int
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty cro:hasCRADate ;
+                                                  owl:someValuesFrom xsd:dateTime
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty cro:hasCRAType ;
+                                                  owl:someValuesFrom xsd:string
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty cro:hasDateOfSurvey ;
+                                                  owl:someValuesFrom xsd:dateTime
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty cro:previousSurveyRatingSummaryPercentage ;
+                                                  owl:someValuesFrom xsd:int
+                                                ] ;
+                                rdfs:comment "CRA (Critical Risk Assessment) refers to a comprehensive evaluation conducted to identify and mitigate risks associated with operations. It typically includes detailed analysis using NATHAN Data and is prepared, revised, and distributed by employees to ensure operational safety and compliance." .
+
+
+###  http://WSP.org/ontology/cro#CriticalRiskScenario
+cro:CriticalRiskScenario rdf:type owl:Class ;
+                         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                           owl:onProperty cro:hasRecommendation ;
+                                           owl:someValuesFrom cro:Recommendation
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty cro:impactsOperation ;
+                                           owl:someValuesFrom cro:Operation
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty cro:riskImpactsEquipment ;
+                                           owl:someValuesFrom cro:Equipment
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty cro:riskImpactsFacility ;
+                                           owl:someValuesFrom cro:Facility
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty cro:BISummary ;
+                                           owl:someValuesFrom xsd:string
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty cro:assetGroup ;
+                                           owl:someValuesFrom xsd:string
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty cro:businessInterruptionUSDM ;
+                                           owl:someValuesFrom xsd:decimal
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty cro:criticalRiskScenarioID ;
+                                           owl:someValuesFrom xsd:string
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty cro:hardControls ;
+                                           owl:someValuesFrom xsd:string
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty cro:incidentDescription ;
+                                           owl:someValuesFrom xsd:string
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty cro:incidentSummary ;
+                                           owl:someValuesFrom xsd:string
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty cro:inherentControls ;
+                                           owl:someValuesFrom xsd:string
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty cro:inherentHazards ;
+                                           owl:someValuesFrom xsd:string
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty cro:likelihood ;
+                                           owl:someValuesFrom xsd:string
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty cro:lossScenarioPeril ;
+                                           owl:someValuesFrom xsd:string
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty cro:otherCostsUSDM ;
+                                           owl:someValuesFrom xsd:decimal
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty cro:preincident_and_workaroundARP ;
+                                           owl:someValuesFrom xsd:string
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty cro:propertyDamageUSDM ;
+                                           owl:someValuesFrom xsd:decimal
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty cro:recommendationDescription ;
+                                           owl:someValuesFrom xsd:string
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty cro:recoveryRepair ;
+                                           owl:someValuesFrom xsd:string
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty cro:repairPeriod ;
+                                           owl:someValuesFrom xsd:string
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty cro:softControls ;
+                                           owl:someValuesFrom xsd:string
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty cro:totalLossUSDM ;
+                                           owl:someValuesFrom xsd:decimal
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty cro:workaround ;
+                                           owl:someValuesFrom xsd:string
+                                         ] ;
+                         rdfs:comment "Class representing critical risk scenarios." .
+
+
+###  http://WSP.org/ontology/cro#CriticalRiskSectionOverview
+cro:CriticalRiskSectionOverview rdf:type owl:Class ;
+                                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                  owl:onProperty cro:hasAssumptions ;
+                                                  owl:someValuesFrom cro:AssumptionsAndBasis
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty cro:hasCatastrophicRiskScenariosWithLowProbability ;
+                                                  owl:someValuesFrom cro:CatastrophicRiskScenariosWithLowProbabilityOverview
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty cro:hasDependencies ;
+                                                  owl:someValuesFrom cro:Dependencies
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty cro:criticaRiskScenarioDefinition ;
+                                                  owl:someValuesFrom xsd:string
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty cro:generalInformationDescription ;
+                                                  owl:someValuesFrom xsd:string
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty cro:riskLikelihoodClassification ;
+                                                  owl:someValuesFrom xsd:string
+                                                ] ;
+                                rdfs:comment "Class representing an overview of critical risk scenarios." .
+
+
+###  http://WSP.org/ontology/cro#Dependencies
+cro:Dependencies rdf:type owl:Class ;
+                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                   owl:onProperty cro:dependencyDefinition ;
+                                   owl:someValuesFrom xsd:string
+                                 ] ;
+                 rdfs:comment "Class representing dependencies in risk scenarios." .
+
+
+###  http://WSP.org/ontology/cro#DieselGenerator
+cro:DieselGenerator rdf:type owl:Class ;
+                    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                      owl:onProperty cro:generatorCapacity ;
+                                      owl:someValuesFrom xsd:decimal
+                                    ] ;
+                    rdfs:comment "A generator that runs on diesel fuel." .
+
+
+###  http://WSP.org/ontology/cro#DistributionSystem
+cro:DistributionSystem rdf:type owl:Class ;
+                       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                         owl:onProperty cro:hasSubstation ;
+                                         owl:someValuesFrom cro:Substation
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty cro:hasTransmissionLine ;
+                                         owl:someValuesFrom cro:TransmissionLine
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty cro:distributionSystemDescription ;
+                                         owl:someValuesFrom xsd:string
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty cro:distributionSystemName ;
+                                         owl:someValuesFrom xsd:string
+                                       ] ;
+                       rdfs:comment "A system for distributing electricity from power stations to end users." .
+
+
+###  http://WSP.org/ontology/cro#Division
+cro:Division rdf:type owl:Class ;
+             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty cro:divisionDescription ;
+                               owl:someValuesFrom xsd:string
+                             ] ;
+             rdfs:comment "Division refers to a subset of a Company responsible for specific aspects of an Operation. Divisions may focus on areas such as safety, production, or logistics within the broader operation." .
+
+
+###  http://WSP.org/ontology/cro#Embankment
+cro:Embankment rdf:type owl:Class ;
+               rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                 owl:onProperty cro:constructionMethod ;
+                                 owl:someValuesFrom xsd:string
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty cro:embankmentHeight ;
+                                 owl:someValuesFrom xsd:decimal
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty cro:embankmentLength ;
+                                 owl:someValuesFrom xsd:decimal
+                               ] .
+
+
+###  http://WSP.org/ontology/cro#Employee
+cro:Employee rdf:type owl:Class ;
+             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty cro:hasEmployeeEmail ;
+                               owl:someValuesFrom xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty cro:hasEmployeePhoneNumber ;
+                               owl:someValuesFrom xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty cro:hasFirstName ;
+                               owl:someValuesFrom xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty cro:hasLastName ;
+                               owl:someValuesFrom xsd:string
+                             ] ;
+             rdfs:comment "Employee refers to individuals who work for a Company, contributing to the Operation in various capacities. Employees may be involved in preparing, distributing, and revising CRAs and other critical documentation." .
+
+
+###  http://WSP.org/ontology/cro#EngineerOfRecord
+cro:EngineerOfRecord rdf:type owl:Class ;
+                     rdfs:subClassOf cro:Employee ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty cro:responsibleFor ;
+                                       owl:someValuesFrom cro:TailingsStorageFacility
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty cro:appointmentDate ;
+                                       owl:someValuesFrom xsd:string
+                                     ] .
+
+
+###  http://WSP.org/ontology/cro#Equipment
+cro:Equipment rdf:type owl:Class ;
+              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                owl:onProperty cro:agedConditionBoolean ;
+                                owl:someValuesFrom xsd:boolean
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty cro:amountOfEquipmentAvailable ;
+                                owl:someValuesFrom xsd:int
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty cro:equipmentDescription ;
+                                owl:someValuesFrom xsd:string
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty cro:equipmentName ;
+                                owl:someValuesFrom xsd:string
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty cro:equipmentReplacedDate ;
+                                owl:someValuesFrom xsd:dateTime
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty cro:equipmentType ;
+                                owl:someValuesFrom xsd:string
+                              ] ;
+              rdfs:comment "Equipment refers to the tools, machinery, and resources used in various operations, including mining, port activities, and marine operations. Equipment is associated with specific Facilities and Processes within the operation." .
+
+
+###  http://WSP.org/ontology/cro#ExternalEnvironmentChanges
+cro:ExternalEnvironmentChanges rdf:type owl:Class ;
+                               rdfs:subClassOf cro:SignificantChanges ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty cro:changeInEnvironment ;
+                                                 owl:someValuesFrom xsd:string
+                                               ] ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty cro:changeInEnvironmentDescription ;
+                                                 owl:someValuesFrom xsd:string
+                                               ] ;
+                               rdfs:comment "Information on changes in external factors, such as environmental conditions or market dynamics, that impact operations." .
+
+
+###  http://WSP.org/ontology/cro#Facility
+cro:Facility rdf:type owl:Class ;
+             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty cro:hasEquipment ;
+                               owl:someValuesFrom cro:Equipment
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty cro:hasProcess ;
+                               owl:someValuesFrom cro:FacilityProcess
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty cro:facilityDescription ;
+                               owl:someValuesFrom xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty cro:facilityName ;
+                               owl:someValuesFrom xsd:string
+                             ] ;
+             rdfs:comment """These Asset Groups are: 
+• Mining (includes tailings dam) 
+• Treatment (milling, concentrating, conditioning) 
+• Smelting 
+• Refining 
+• Materials Handling 
+• Transport (ship, rail, road, product pipeline, air) 
+• Power Distribution 
+• Power Generation 
+• Water Supply 
+• Port Facilities""" .
+
+
+###  http://WSP.org/ontology/cro#FacilityProcess
+cro:FacilityProcess rdf:type owl:Class ;
+                    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                      owl:onProperty cro:processDescription ;
+                                      owl:someValuesFrom xsd:string
+                                    ] ;
+                    rdfs:comment "Facility Process refers to specific activities or workflows carried out within a Facility. These processes are essential for maintaining the operation of the Facility and may involve the use of specialized Equipment." .
+
+
+###  http://WSP.org/ontology/cro#FinalProduct
+cro:FinalProduct rdf:type owl:Class ;
+                 rdfs:subClassOf cro:Dependencies ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty cro:finalProductDescription ;
+                                   owl:someValuesFrom xsd:string
+                                 ] ;
+                 rdfs:comment "Class representing final product details." .
+
+
+###  http://WSP.org/ontology/cro#Inloading
+cro:Inloading rdf:type owl:Class ;
+              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                owl:onProperty cro:hasEquipment ;
+                                owl:someValuesFrom cro:Equipment
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty cro:hasProcess ;
+                                owl:someValuesFrom cro:FacilityProcess
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty cro:inloadingDescription ;
+                                owl:someValuesFrom xsd:string
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty cro:inloadsMaterialFrom ;
+                                owl:someValuesFrom xsd:string
+                              ] ;
+              rdfs:comment "Inloading refers to the marine operation involving the receipt and handling of materials or goods at a Port Facility. This process includes the use of Equipment such as cranes, conveyors, and vessels." .
+
+
+###  http://WSP.org/ontology/cro#MFL_Report
+cro:MFL_Report rdf:type owl:Class ;
+               rdfs:subClassOf cro:CriticalRiskAssesmentReport ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty cro:hasIdentifiedCriticalRiskScenarios ;
+                                 owl:someValuesFrom cro:CriticalRiskScenario
+                               ] .
+
+
+###  http://WSP.org/ontology/cro#MaterialHandling
+cro:MaterialHandling rdf:type owl:Class ;
+                     rdfs:subClassOf cro:Facility .
+
+
+###  http://WSP.org/ontology/cro#Materials
+cro:Materials rdf:type owl:Class ;
+              rdfs:subClassOf cro:Dependencies ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty cro:rawMaterialDescription ;
+                                owl:someValuesFrom xsd:string
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty cro:rawMaterialName ;
+                                owl:someValuesFrom xsd:string
+                              ] ;
+              rdfs:comment "Class representing materials in the report." .
+
+
+###  http://WSP.org/ontology/cro#Mine
+cro:Mine rdf:type owl:Class ;
+         rdfs:subClassOf cro:Operation ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty cro:hasTSF ;
+                           owl:someValuesFrom cro:TailingsStorageFacility
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty cro:designDate ;
+                           owl:someValuesFrom xsd:string
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty cro:mineLocation ;
+                           owl:someValuesFrom xsd:string
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty cro:mineName ;
+                           owl:someValuesFrom xsd:string
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty cro:mineType ;
+                           owl:someValuesFrom xsd:string
+                         ] .
+
+
+###  http://WSP.org/ontology/cro#NATHANData
+cro:NATHANData rdf:type owl:Class ;
+               rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                 owl:onProperty cro:Tsunami ;
+                                 owl:someValuesFrom xsd:string
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty cro:earthquakeZone ;
+                                 owl:someValuesFrom xsd:string
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty cro:extratropicalCycloner ;
+                                 owl:someValuesFrom xsd:string
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty cro:flood ;
+                                 owl:someValuesFrom xsd:string
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty cro:stormSurge ;
+                                 owl:someValuesFrom xsd:string
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty cro:tornado ;
+                                 owl:someValuesFrom xsd:string
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty cro:tropicalCyclone ;
+                                 owl:someValuesFrom xsd:string
+                               ] ;
+               rdfs:comment "NATHAN Data refers to specific information used in Critical Risk Assessments (CRAs) to assess and mitigate risks in operations. This data is prepared by Employees, distributed, and revised within a Company." .
+
+
+###  http://WSP.org/ontology/cro#NLE_Report
+cro:NLE_Report rdf:type owl:Class ;
+               rdfs:subClassOf cro:CriticalRiskAssesmentReport ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty cro:hasIdentifiedCriticalRiskScenarios ;
+                                 owl:someValuesFrom cro:CriticalRiskScenario
+                               ] .
+
+
+###  http://WSP.org/ontology/cro#OpenPit
+cro:OpenPit rdf:type owl:Class ;
+            rdfs:subClassOf cro:Mine ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty cro:benchHeight ;
+                              owl:someValuesFrom xsd:decimal
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty cro:bermWidth ;
+                              owl:someValuesFrom xsd:decimal
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty cro:slopeAngle ;
+                              owl:someValuesFrom xsd:string
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty cro:stockpileCapacity ;
+                              owl:someValuesFrom xsd:decimal
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty cro:wasteRockDumpHeight ;
+                              owl:someValuesFrom xsd:decimal
+                            ] .
+
+
+###  http://WSP.org/ontology/cro#Operation
+cro:Operation rdf:type owl:Class ;
+              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                owl:onProperty cro:hasFacility ;
+                                owl:someValuesFrom cro:Facility
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty cro:hasProcessControl ;
+                                owl:someValuesFrom cro:ProcessControlAutomationSystem
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty cro:hasProject ;
+                                owl:someValuesFrom cro:Project
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty cro:hasRiskAssessmentReport ;
+                                owl:someValuesFrom cro:CriticalRiskAssesmentReport
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty cro:operatedBy ;
+                                owl:someValuesFrom cro:Division
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty cro:ownedBy ;
+                                owl:someValuesFrom cro:Company
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty <http://WSP.org/ontology/cro/hasMFLRiskAssessmentReports> ;
+                                owl:someValuesFrom cro:MFL_Report
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty <http://WSP.org/ontology/cro/hasNLERiskAssessmentReports> ;
+                                owl:someValuesFrom cro:NLE_Report
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty cro:electricityDemand ;
+                                owl:someValuesFrom xsd:decimal
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty cro:hasAddress ;
+                                owl:someValuesFrom xsd:string
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty cro:hasEmail ;
+                                owl:someValuesFrom xsd:string
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty cro:hasLatitude ;
+                                owl:someValuesFrom xsd:decimal
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty cro:hasLongitude ;
+                                owl:someValuesFrom xsd:decimal
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty cro:hasName ;
+                                owl:someValuesFrom xsd:string
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty cro:hasPhone ;
+                                owl:someValuesFrom xsd:string
+                              ] ;
+              rdfs:comment "Operation refers to the broader activity or process taking place in a specific location, such as mining, chemical processing, or port operations. The Operation class serves as a general category, with specific types of operations, such as Port or Smelting, being subclasses." .
+
+
+###  http://WSP.org/ontology/cro#OreBody
+cro:OreBody rdf:type owl:Class ;
+            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                              owl:onProperty cro:containedIn ;
+                              owl:someValuesFrom cro:Mine
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty cro:providesOreForProcessing ;
+                              owl:someValuesFrom cro:ProcessingPlant
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty cro:grade ;
+                              owl:someValuesFrom xsd:string
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty cro:oreBodyName ;
+                              owl:someValuesFrom xsd:string
+                            ] .
+
+
+###  http://WSP.org/ontology/cro#OrganisationalChanges
+cro:OrganisationalChanges rdf:type owl:Class ;
+                          rdfs:subClassOf cro:SignificantChanges ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty cro:organisationalChangeDescription ;
+                                            owl:someValuesFrom xsd:string
+                                          ] ;
+                          rdfs:comment "Updates on changes within the organizational structure, including new appointments or shifts in management roles." .
+
+
+###  http://WSP.org/ontology/cro#Other
+cro:Other rdf:type owl:Class ;
+          rdfs:subClassOf cro:Dependencies ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty cro:otherDependenciesDescription ;
+                            owl:someValuesFrom xsd:string
+                          ] ;
+          rdfs:comment "Class representing any other dependencies or details." .
+
+
+###  http://WSP.org/ontology/cro#Outloading
+cro:Outloading rdf:type owl:Class ;
+               rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                 owl:onProperty cro:hasEquipment ;
+                                 owl:someValuesFrom cro:Equipment
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty cro:hasProcess ;
+                                 owl:someValuesFrom cro:FacilityProcess
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty cro:outloadingDescription ;
+                                 owl:someValuesFrom xsd:string
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty cro:outloadsMaterialTo ;
+                                 owl:someValuesFrom xsd:string
+                               ] ;
+               rdfs:comment "Outloading refers to the marine operation involving the dispatch of materials or goods from a Port Facility. Similar to inloading, this process relies on Equipment and coordination within the Port." .
+
+
+###  http://WSP.org/ontology/cro#Port
+cro:Port rdf:type owl:Class ;
+         rdfs:subClassOf cro:Operation ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty cro:hasMarineOperation ;
+                           owl:someValuesFrom cro:Berthing
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty cro:hasTerminal ;
+                           owl:someValuesFrom cro:PortTerminal
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty cro:numberOfContractors ;
+                           owl:someValuesFrom xsd:int
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty cro:numberOfEmployees ;
+                           owl:someValuesFrom xsd:int
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty cro:portName ;
+                           owl:someValuesFrom xsd:string
+                         ] ;
+         rdfs:comment "Port refers to the operational area where marine activities, including inloading, outloading, and berthing, occur. The Port includes various Facilities, Terminals, and Equipment necessary for these operations." .
+
+
+###  http://WSP.org/ontology/cro#PortTerminal
+cro:PortTerminal rdf:type owl:Class ;
+                 rdfs:subClassOf cro:Facility ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty cro:hasInloading ;
+                                   owl:someValuesFrom cro:Inloading
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty cro:hasOutloading ;
+                                   owl:someValuesFrom cro:Outloading
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty cro:ShipsMaterialTo ;
+                                   owl:someValuesFrom xsd:string
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty cro:electricityDemand ;
+                                   owl:someValuesFrom xsd:decimal
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty cro:materialHandled ;
+                                   owl:someValuesFrom xsd:string
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty cro:materialHandledAmount ;
+                                   owl:someValuesFrom xsd:decimal
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty cro:operationDescription ;
+                                   owl:someValuesFrom xsd:string
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty cro:powerDemand ;
+                                   owl:someValuesFrom xsd:decimal
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty cro:recievesMaterialFrom ;
+                                   owl:someValuesFrom xsd:string
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty cro:terminalName ;
+                                   owl:someValuesFrom xsd:string
+                                 ] ;
+                 rdfs:comment "Port Terminal refers to specific areas within a Port where goods or materials are loaded, unloaded, or stored. Terminals are integral to the operation of a Port and are equipped with the necessary infrastructure." .
+
+
+###  http://WSP.org/ontology/cro#PowerStation
+cro:PowerStation rdf:type owl:Class ;
+                 rdfs:subClassOf cro:Facility ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty cro:hasDieselGenerator ;
+                                   owl:someValuesFrom cro:DieselGenerator
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty cro:hasDistributionSystem ;
+                                   owl:someValuesFrom cro:DistributionSystem
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty cro:hasPowerStation ;
+                                   owl:someValuesFrom cro:PowerStation
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty cro:hasTurbine ;
+                                   owl:someValuesFrom cro:Turbine
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty cro:operatedBy ;
+                                   owl:someValuesFrom cro:Company
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty cro:ownedBy ;
+                                   owl:someValuesFrom cro:Company
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty cro:suppliesPowerTo ;
+                                   owl:someValuesFrom cro:Operation
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty cro:suppliesPowerTo ;
+                                   owl:someValuesFrom cro:Town
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty cro:networkDescription ;
+                                   owl:someValuesFrom xsd:string
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty cro:networkName ;
+                                   owl:someValuesFrom xsd:string
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty cro:powerStationCapacity ;
+                                   owl:someValuesFrom xsd:decimal
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty cro:powerStationDescription ;
+                                   owl:someValuesFrom xsd:string
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty cro:powerStationLocation ;
+                                   owl:someValuesFrom xsd:string
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty cro:powerStationName ;
+                                   owl:someValuesFrom xsd:string
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty cro:powerStationType ;
+                                   owl:someValuesFrom xsd:string
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty cro:region ;
+                                   owl:someValuesFrom xsd:string
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty cro:supportNetwork ;
+                                   owl:someValuesFrom xsd:string
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty cro:totalElectricityDemand ;
+                                   owl:someValuesFrom xsd:decimal
+                                 ] ;
+                 rdfs:comment "A facility where electricity is generated, typically containing turbines and generators." ,
+                              "A network responsible for generating and distributing electricity." .
+
+
+###  http://WSP.org/ontology/cro#ProcessControlAutomationSystem
+cro:ProcessControlAutomationSystem rdf:type owl:Class ;
+                                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                     owl:onProperty cro:InstalledInYear ;
+                                                     owl:someValuesFrom xsd:string
+                                                   ] ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty cro:PCASDescription ;
+                                                     owl:someValuesFrom xsd:string
+                                                   ] ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty cro:PCASName ;
+                                                     owl:someValuesFrom xsd:string
+                                                   ] ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty cro:PCASlocatedIn ;
+                                                     owl:someValuesFrom xsd:string
+                                                   ] ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty cro:electricityDemand ;
+                                                     owl:someValuesFrom xsd:string
+                                                   ] ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty cro:hasPhone ;
+                                                     owl:someValuesFrom xsd:string
+                                                   ] ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty cro:retiredInYear ;
+                                                     owl:someValuesFrom xsd:string
+                                                   ] ;
+                                   rdfs:comment "Process Control Automation System (PCAS) refers to a comprehensive system designed to automate, monitor, and control industrial processes. It typically integrates hardware and software components to ensure precise control, data acquisition, and real-time decision-making in various operational environments." .
+
+
+###  http://WSP.org/ontology/cro#ProcessingPlant
+cro:ProcessingPlant rdf:type owl:Class ;
+                    rdfs:subClassOf cro:Facility ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cro:hasEquipment ;
+                                      owl:someValuesFrom cro:Equipment
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cro:isPartOf ;
+                                      owl:someValuesFrom cro:Mine
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cro:producesTailings ;
+                                      owl:someValuesFrom cro:TailingsStorageFacility
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cro:designCapacity ;
+                                      owl:someValuesFrom xsd:decimal
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty cro:oreTypeProcessed ;
+                                      owl:someValuesFrom xsd:string
+                                    ] .
+
+
+###  http://WSP.org/ontology/cro#Project
+cro:Project rdf:type owl:Class ;
+            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                              owl:onProperty cro:projectCompletionDate ;
+                              owl:someValuesFrom xsd:dateTime
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty cro:projectDescription ;
+                              owl:someValuesFrom xsd:string
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty cro:projectName ;
+                              owl:someValuesFrom xsd:string
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty cro:supportNetwork ;
+                              owl:someValuesFrom xsd:string
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty cro:totalElectricityDemand ;
+                              owl:someValuesFrom xsd:decimal
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty cro:workCommencedBoolean ;
+                              owl:someValuesFrom xsd:boolean
+                            ] ;
+            rdfs:comment "A Project represents a structured effort within an operation aimed at achieving specific goals, such as infrastructure upgrades or process improvements." .
+
+
+###  http://WSP.org/ontology/cro#Recommendation
+cro:Recommendation rdf:type owl:Class ;
+                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                     owl:onProperty cro:improvesOperation ;
+                                     owl:someValuesFrom cro:Operation
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty cro:recommendationImprovesEquipment ;
+                                     owl:someValuesFrom cro:Equipment
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty cro:recommendationImprovesFacility ;
+                                     owl:someValuesFrom cro:Facility
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty cro:riskManagementSystemImproved ;
+                                     owl:someValuesFrom cro:RiskManagementSystem
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty cro:classification ;
+                                     owl:someValuesFrom xsd:string
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty cro:dateCompletedSupersededRejected ;
+                                     owl:someValuesFrom xsd:string
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty cro:expenditure ;
+                                     owl:someValuesFrom xsd:string
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty cro:likelihoodAfterRecommendation ;
+                                     owl:someValuesFrom xsd:string
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty cro:likelihoodNow ;
+                                     owl:someValuesFrom xsd:string
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty cro:lossEstimateAfterRecommendationUSDM ;
+                                     owl:someValuesFrom xsd:decimal
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty cro:lossEstimateNowUSDM ;
+                                     owl:someValuesFrom xsd:decimal
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty cro:positionAccountable ;
+                                     owl:someValuesFrom xsd:string
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty cro:recommendationDescription ;
+                                     owl:someValuesFrom xsd:string
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty cro:recommendationDetailText ;
+                                     owl:someValuesFrom xsd:string
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty cro:recommendationEstimatedCostUSDM ;
+                                     owl:someValuesFrom xsd:decimal
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty cro:recommendationPriority ;
+                                     owl:someValuesFrom xsd:string
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty cro:recommendationStatus ;
+                                     owl:someValuesFrom xsd:string
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty cro:recommendationYear ;
+                                     owl:someValuesFrom xsd:string
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty cro:siteResponseOrComments ;
+                                     owl:someValuesFrom xsd:string
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty cro:summaryText ;
+                                     owl:someValuesFrom xsd:string
+                                   ] ;
+                   rdfs:comment "Class representing the details of a recommendation." .
+
+
+###  http://WSP.org/ontology/cro#RecommendationOverview
+cro:RecommendationOverview rdf:type owl:Class ;
+                           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                             owl:onProperty cro:hasRejectedRecommendations ;
+                                             owl:someValuesFrom cro:RejectedRecommendationsSinceLastVisit
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty cro:completeRecommendationNumber ;
+                                             owl:someValuesFrom xsd:string
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty cro:highReturnNewRecommendations ;
+                                             owl:someValuesFrom xsd:string
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty cro:inProgressRecommendationNumber ;
+                                             owl:someValuesFrom xsd:string
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty cro:incrementalImprovementNumber ;
+                                             owl:someValuesFrom xsd:string
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty cro:mandarotyNewRecommendations ;
+                                             owl:someValuesFrom xsd:string
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty cro:mediumReturnNewRecommendations ;
+                                             owl:someValuesFrom xsd:string
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty cro:recommendationDefinition ;
+                                             owl:someValuesFrom xsd:string
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty cro:recommendationsCompletedSinceLastReview ;
+                                             owl:someValuesFrom xsd:string
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty cro:rejectedRecommendationNumber ;
+                                             owl:someValuesFrom xsd:string
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty cro:suspendedRecommendationNumber ;
+                                             owl:someValuesFrom xsd:string
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty cro:totalRecommendationNumber ;
+                                             owl:someValuesFrom xsd:string
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty cro:underReviewRecommendationNumber ;
+                                             owl:someValuesFrom xsd:string
+                                           ] ;
+                           rdfs:comment "Class representing the overview of recommendations." .
+
+
+###  http://WSP.org/ontology/cro#ReferenceDocuments
+cro:ReferenceDocuments rdf:type owl:Class ;
+                       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                         owl:onProperty cro:referenceDocumentDescription ;
+                                         owl:someValuesFrom xsd:string
+                                       ] ;
+                       rdfs:comment "Class representing reference documents for the report." .
+
+
+###  http://WSP.org/ontology/cro#RejectedRecommendationsSinceLastVisit
+cro:RejectedRecommendationsSinceLastVisit rdf:type owl:Class ;
+                                          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                            owl:onProperty cro:rejectedRecommendationDescription ;
+                                                            owl:someValuesFrom xsd:string
+                                                          ] ;
+                                          rdfs:comment "Class representing rejected recommendations since the last visit." .
+
+
+###  http://WSP.org/ontology/cro#Revision
+cro:Revision rdf:type owl:Class ;
+             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty cro:issuedBy ;
+                               owl:someValuesFrom cro:Employee
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty cro:checkedBy ;
+                               owl:someValuesFrom xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty cro:hasDateOfIssue ;
+                               owl:someValuesFrom xsd:dateTime
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty cro:hasRevisionDetail ;
+                               owl:someValuesFrom xsd:string
+                             ] ;
+             rdfs:comment "Revision refers to the process of reviewing and updating critical documents, such as CRAs and NATHAN Data, within an operation. Revisions are typically carried out by Employees to ensure accuracy and compliance." .
+
+
+###  http://WSP.org/ontology/cro#RiskManagementSubElement
+cro:RiskManagementSubElement rdf:type owl:Class ;
+                             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                               owl:onProperty cro:currentSurveySubElementScore ;
+                                               owl:someValuesFrom xsd:int
+                                             ] ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty cro:previousSurveySubElementScore ;
+                                               owl:someValuesFrom xsd:int
+                                             ] ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty cro:riskManagementSubElementInformation ;
+                                               owl:someValuesFrom xsd:string
+                                             ] .
+
+
+###  http://WSP.org/ontology/cro#RiskManagementSystem
+cro:RiskManagementSystem rdf:type owl:Class ;
+                         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                           owl:onProperty cro:hasRiskManagementSubElement ;
+                                           owl:someValuesFrom cro:RiskManagementSubElement
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty cro:currentSurveySystemPercentage ;
+                                           owl:someValuesFrom xsd:int
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty cro:previousSurveySystemPercentage ;
+                                           owl:someValuesFrom xsd:int
+                                         ] .
+
+
+###  http://WSP.org/ontology/cro#SignificantChanges
+cro:SignificantChanges rdf:type owl:Class ;
+                       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                         owl:onProperty cro:significantChangeDescription ;
+                                         owl:someValuesFrom xsd:string
+                                       ] ;
+                       rdfs:comment "A collection of major updates and modifications identified during the most recent Critical Risk Assessment. A change in the Critical Risk Assesment Report can be: an Organiational Change, a system change, a change to raw materials, production or sales, a change to equipment and facilities, a change to external environment or a change to a specific sritical risk scenario." .
+
+
+###  http://WSP.org/ontology/cro#SignificantIncident
+cro:SignificantIncident rdf:type owl:Class ;
+                        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                          owl:onProperty cro:incidentDescription ;
+                                          owl:someValuesFrom xsd:string
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty cro:incidentName ;
+                                          owl:someValuesFrom xsd:string
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty cro:timeSinceLastIncident ;
+                                          owl:someValuesFrom xsd:string
+                                        ] ;
+                        rdfs:comment "Records of significant incidents that have occurred, including their impact on operations and any resulting changes." .
+
+
+###  http://WSP.org/ontology/cro#Spillway
+cro:Spillway rdf:type owl:Class ;
+             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty cro:connectsTailingsCells ;
+                               owl:someValuesFrom cro:TailingsCell
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty cro:spillwayStatus ;
+                               owl:someValuesFrom xsd:string
+                             ] .
+
+
+###  http://WSP.org/ontology/cro#Substation
+cro:Substation rdf:type owl:Class ;
+               rdfs:subClassOf cro:SurveyAndReportDetails ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty cro:UpgradeThroughProject ;
+                                 owl:someValuesFrom cro:Project
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty cro:designMaterialSpecification ;
+                                 owl:someValuesFrom xsd:string
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty cro:fireSupressionCondition ;
+                                 owl:someValuesFrom xsd:string
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty cro:substationCondition ;
+                                 owl:someValuesFrom xsd:string
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty cro:substationDescription ;
+                                 owl:someValuesFrom xsd:string
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty cro:substationInstallationDate ;
+                                 owl:someValuesFrom xsd:string
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty cro:substationLocatedIn ;
+                                 owl:someValuesFrom xsd:string
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty cro:substationName ;
+                                 owl:someValuesFrom xsd:string
+                               ] ;
+               rdfs:comment "A facility in the electrical distribution system where voltage is stepped up or down using transformers." ;
+               rdfs:label "Substation" .
+
+
+###  http://WSP.org/ontology/cro#SurveyAndReportDetails
+cro:SurveyAndReportDetails rdf:type owl:Class ;
+                           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                             owl:onProperty cro:definesRecommendations ;
+                                             owl:someValuesFrom cro:RecommendationOverview
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty cro:hasReferenceDocuments ;
+                                             owl:someValuesFrom cro:ReferenceDocuments
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty cro:contactDescription ;
+                                             owl:someValuesFrom xsd:string
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty cro:generalNotes ;
+                                             owl:someValuesFrom xsd:string
+                                           ] ;
+                           rdfs:comment "Class representing details of the survey and report." .
+
+
+###  http://WSP.org/ontology/cro#SystemChanges
+cro:SystemChanges rdf:type owl:Class ;
+                  rdfs:subClassOf cro:SignificantChanges ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty cro:systemChangeDescription ;
+                                    owl:someValuesFrom xsd:string
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty cro:systemChangeName ;
+                                    owl:someValuesFrom xsd:string
+                                  ] ;
+                  rdfs:comment "Changes or upgrades to the systems used within the operation, particularly those affecting operational control or data management." .
+
+
+###  http://WSP.org/ontology/cro#TailingsCell
+cro:TailingsCell rdf:type owl:Class ;
+                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                   owl:onProperty cro:capacity ;
+                                   owl:someValuesFrom xsd:decimal
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty cro:cellNumber ;
+                                   owl:someValuesFrom xsd:int
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty cro:cellStatus ;
+                                   owl:someValuesFrom xsd:string
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty cro:dimensions ;
+                                   owl:someValuesFrom xsd:decimal
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty cro:expectedFailureDate ;
+                                   owl:someValuesFrom xsd:string
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty cro:shape ;
+                                   owl:someValuesFrom xsd:string
+                                 ] .
+
+
+###  http://WSP.org/ontology/cro#TailingsStorageFacility
+cro:TailingsStorageFacility rdf:type owl:Class ;
+                            rdfs:subClassOf cro:Facility ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty cro:hasEmbankment ;
+                                              owl:someValuesFrom cro:Embankment
+                                            ] ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty cro:hasSpillway ;
+                                              owl:someValuesFrom cro:Spillway
+                                            ] ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty cro:hasTailingsCell ;
+                                              owl:someValuesFrom cro:TailingsCell
+                                            ] ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty cro:TSFCapacity ;
+                                              owl:someValuesFrom xsd:string
+                                            ] ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty cro:TSFConsequenceCategory ;
+                                              owl:someValuesFrom xsd:string
+                                            ] ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty cro:TSFName ;
+                                              owl:someValuesFrom xsd:string
+                                            ] ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty cro:TSFStatus ;
+                                              owl:someValuesFrom xsd:string
+                                            ] .
+
+
+###  http://WSP.org/ontology/cro#Town
+cro:Town rdf:type owl:Class ;
+         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                           owl:onProperty cro:electricityDemand ;
+                           owl:someValuesFrom xsd:string
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty cro:townName ;
+                           owl:someValuesFrom xsd:string
+                         ] ;
+         rdfs:comment "Towns relevant to the operation" .
+
+
+###  http://WSP.org/ontology/cro#Transformer
+cro:Transformer rdf:type owl:Class ;
+                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                  owl:onProperty cro:transformerLocatedAtSubstation ;
+                                  owl:someValuesFrom cro:Substation
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty cro:agedConditionBoolean ;
+                                  owl:someValuesFrom xsd:boolean
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty cro:amperage ;
+                                  owl:someValuesFrom xsd:string
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty cro:inputVoltage ;
+                                  owl:someValuesFrom xsd:string
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty cro:installationDate ;
+                                  owl:someValuesFrom xsd:string
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty cro:operationCriticalReliance ;
+                                  owl:someValuesFrom xsd:string
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty cro:outputVoltage ;
+                                  owl:someValuesFrom xsd:string
+                                ] ;
+                rdfs:comment "A device that transfers electrical energy between two or more circuits through electromagnetic induction, used to step up or down voltage levels." .
+
+
+###  http://WSP.org/ontology/cro#TransmissionLine
+cro:TransmissionLine rdf:type owl:Class ;
+                     rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                       owl:onProperty cro:UpgradeThroughProject ;
+                                       owl:someValuesFrom cro:Project
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty cro:connectsFrom ;
+                                       owl:someValuesFrom cro:PowerStation
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty cro:connectsTo ;
+                                       owl:someValuesFrom cro:Transformer
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty cro:agedConditionBoolean ;
+                                       owl:someValuesFrom xsd:boolean
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty cro:installationDate ;
+                                       owl:someValuesFrom xsd:string
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty cro:operationCriticalReliance ;
+                                       owl:someValuesFrom xsd:string
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty cro:transmissionLineType ;
+                                       owl:someValuesFrom xsd:string
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty cro:upgradeYear ;
+                                       owl:someValuesFrom xsd:string
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty cro:upgradedBy ;
+                                       owl:someValuesFrom xsd:string
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty cro:voltageLevel ;
+                                       owl:someValuesFrom xsd:string
+                                     ] ;
+                     rdfs:comment "High voltage cables used to transmit electricity over long distances." .
+
+
+###  http://WSP.org/ontology/cro#Turbine
+cro:Turbine rdf:type owl:Class ;
+            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                              owl:onProperty cro:engineCapacity ;
+                              owl:someValuesFrom xsd:string
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty cro:engineModel ;
+                              owl:someValuesFrom xsd:string
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty cro:runByDieselBoolean ;
+                              owl:someValuesFrom xsd:boolean
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty cro:runByGasBoolean ;
+                              owl:someValuesFrom xsd:boolean
+                            ] ;
+            rdfs:comment "A machine that converts energy from a fluid flow into mechanical energy, typically used in electricity generation." .
+
+
+###  http://WSP.org/ontology/cro#Underground
+cro:Underground rdf:type owl:Class ;
+                rdfs:subClassOf cro:Mine ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty cro:numberOfPanels ;
+                                  owl:someValuesFrom xsd:int
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty cro:numberOfShafts ;
+                                  owl:someValuesFrom xsd:int
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty cro:ventilationAirflow ;
+                                  owl:someValuesFrom xsd:string
+                                ] .
+
+
+###  http://WSP.org/ontology/cro#UtilitySuppliersAndConsumables
+cro:UtilitySuppliersAndConsumables rdf:type owl:Class ;
+                                   rdfs:subClassOf cro:Dependencies ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty cro:utilityOrSupplyDescription ;
+                                                     owl:someValuesFrom xsd:string
+                                                   ] ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty cro:utilityOrSupplyName ;
+                                                     owl:someValuesFrom xsd:string
+                                                   ] ;
+                                   rdfs:comment "Class representing utility suppliers and consumables." .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

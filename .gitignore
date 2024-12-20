@@ -1,0 +1,6 @@
+Azure OpenAI credentials.env
+*.xlsx
+*.pdf
+*.docx
+subgraph.html
+lib/

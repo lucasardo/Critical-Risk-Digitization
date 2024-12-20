@@ -1,0 +1,25 @@
+Template #1: Retrieving Sub-Elements of a Specific Operation
+
+To find the sub-elements of a specific operation named "XXX," you can use the following SPARQL query. Replace "XXX" with the desired operation name:
+PREFIX cro: <http://WSP.org/ontology/cro#>
+SELECT ?riskManagementSubElement 
+WHERE {
+    ?operation cro:hasName "XXX" ;
+               cro:hasRiskAsessmentReport ?riskAssessmentReport .
+    ?riskAssessmentReport cro:hasRiskManagementSystem ?riskManagementSystem .
+    ?riskManagementSystem cro:hasRiskManagementSubElement ?riskManagementSubElement .
+}
+
+
+
+Template #2: Retrieving Risk Management System of a Specific Operation
+
+To look at the risk management system associated with a specific operation named "XXX," you can use the following SPARQL query. Replace "XXX" with the operation name you're interested in:
+PREFIX cro: <http://WSP.org/ontology/cro#>
+SELECT ?riskManagementSystem
+WHERE {
+   ?operation cro:hasName "XXX" ;
+               cro:hasRiskAsessmentReport ?riskAssessmentReport .
+    ?riskAssessmentReport cro:hasRiskManagementSystem ?riskManagementSystem .
+}
+
