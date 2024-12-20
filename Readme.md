@@ -10,4 +10,4 @@ The “Retrieval” folder contains the scripts that define the RAG strategy bas
 
 ### UI
 
-La cartella "UI" contiene gli script che definiscono l'interfaccia dell'applicazione. Il framework utilizzato per la UI è Streamlit.
+The “UI” folder contains the scripts that define the application interface. The framework used for the UI is Streamlit.
